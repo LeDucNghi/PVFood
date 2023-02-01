@@ -46,7 +46,7 @@ function Header() {
   }, [dispatch, accountDetail]);
 
   useEffect(() => {
-    handleChangeUserFirestoreCart();
+    if (accountDetail) handleChangeUserFirestoreCart();
   }, [cartStorage]);
 
   window.addEventListener("scroll", function () {
