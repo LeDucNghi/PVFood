@@ -1,0 +1,26 @@
+header.sticky {
+  z-index: 100;
+  height: 80px;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(253, 176, 176, 0.1);
+}
+
+header.sticky nav {
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header.sticky .menu-logo {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header.sticky .section {
+  top: 50%;
+  transform: translateY(-50%);
+}
+header.sticky nav .menu-text .menu-link::before {
+  background: #000;
+}

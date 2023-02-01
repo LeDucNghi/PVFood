@@ -1,0 +1,137 @@
+.regist_birthday {
+  position: absolute;
+  left: 0px;
+  top: 5em;
+  margin-bottom: 2em;
+  width: 400px;
+  height: 100px;
+}
+
+.regist_contain {
+  width: 400px;
+  height: 800px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #000; */
+}
+
+.regist_form {
+  position: relative;
+  width: 100%;
+  height: 680px;
+  /* background: #000; */
+}
+
+.register_input {
+  top: -1em;
+}
+
+.register_policy {
+  top: 35em;
+  margin: 1em 0;
+}
+
+.warning_pass {
+  position: relative;
+  top: 0.8em;
+  width: 100%;
+  margin-bottom: 1.6em;
+}
+
+.warning_pass span {
+  padding: 1.5em;
+  color: #999;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.warning_pass span strong {
+  color: #000;
+  font-weight: bolder;
+}
+
+.required_field {
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  bottom: 8em;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.required_field span {
+  padding: 1.5em;
+  color: #d4a0a2;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+
+.submit_regist {
+  bottom: 0;
+  left: 0;
+}
+
+.submit_regist .register {
+  background: #d4a0a2;
+  width: 100%;
+  color: #fff;
+}
+
+.regist_birthday {
+  position: relative;
+  display: flex;
+  padding: 5.2em 1.5em;
+  /* background: #000; */
+}
+
+.regist_birthday h4 {
+  position: absolute;
+  padding-right: 1.1em;
+  text-align: left;
+  /* background: red; */
+  top: 0;
+  color: #999;
+  font-weight: 500;
+  font-size: 1em;
+  font-family: "Krona One", sans-serif;
+}
+
+.react-select .react-select__menu {
+  transition: 0.5s ease-in-out;
+  margin-top: 3em;
+}
+
+.regist_birthday h4 b {
+  color: #000;
+}
+
+.day {
+  width: 8rem;
+}
+
+.month {
+  width: 14rem;
+}
+
+.year {
+  width: 9em;
+}
+
+.preview_img,
+.img_picker {
+  width: 40%;
+  height: 100%;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+.img_picker input[type="file"] {
+  display: none;
+}

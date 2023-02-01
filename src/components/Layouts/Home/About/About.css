@@ -1,0 +1,139 @@
+@import url(//db.onlinewebfonts.com/c/21400dc679986534519c638136d62dbf?family=Rage+Italic);
+
+.about {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* background: violet; */
+}
+
+.about_rectang {
+  position: relative;
+  margin: 0 auto;
+  width: 400px;
+  height: 550px;
+  background: transparent;
+  border: 1px solid black;
+}
+
+.about_info {
+  position: relative;
+  width: 500px;
+  height: 310px;
+  /* left: 80em; */
+  right: 10%;
+  top: -10em;
+  z-index: 1;
+}
+.info_content {
+  width: 621px;
+  height: 432.28px;
+
+  background: linear-gradient(
+    111.68deg,
+    rgba(255, 255, 255, 0.29) 7.59%,
+    rgba(255, 255, 255, 0.39) 102.04%
+  );
+  border: 3px solid rgba(255, 255, 255, 0.28);
+  box-sizing: border-box;
+  backdrop-filter: blur(25px);
+  border-radius: 61px;
+  box-shadow: 8px 8px 16px #c4c4c4, -8px -8px 16px #ffffff;
+}
+
+.info_content h2 {
+  padding: 1em 1em 0.5em 1em;
+  font-family: "Rage Italic";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 20px;
+  text-shadow: none;
+}
+
+.info_content p {
+  padding: 0em 5em;
+  font-family: "Ariata Display";
+  font-weight: 500;
+  line-height: 30px;
+  font-size: 1em;
+}
+
+.img_review {
+  position: relative;
+  left: 10em;
+  z-index: 1;
+  /* left: 20%; */
+  /* left: 25em; */
+}
+
+.img_review img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50px 0px;
+  box-shadow: 8px 8px 16px #c4c4c4, -8px -8px 16px #ffffff;
+}
+
+.drop-shadow {
+  position: absolute;
+  margin-top: 3em;
+  width: 433.07px;
+  height: 20.62px;
+
+  background: rgba(255, 255, 255, 0.1);
+  /* background: violet; */
+  background-blend-mode: overlay;
+  filter: blur(40px);
+}
+
+.track {
+  position: absolute;
+  z-index: -1;
+  top: 45rem;
+  left: 30rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: transparent;
+}
+
+.circle {
+  position: absolute;
+  z-index: 1;
+  top: 0rem;
+  left: 0rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: none;
+  animation: rotate 10s infinite linear;
+}
+
+.point {
+  position: absolute;
+  z-index: 2;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  background: #000;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-340deg);
+  }
+}

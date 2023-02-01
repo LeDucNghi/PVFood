@@ -1,0 +1,190 @@
+.collection .react-wavy-transitions__wavy-link,
+.content p,
+.text .col_text {
+  font-family: "Ariata Display";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  color: #000000;
+}
+
+.text .col_text,
+.collection .react-wavy-transitions__wavy-link:hover .col_text:hover {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.collection .react-wavy-transitions__wavy-link::before,
+.text .col_text::before {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.collection .react-wavy-transitions__wavy-link:hover::before,
+.col_text:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.collection {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 300px);
+  gap: 50px; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.collection_content {
+  position: relative;
+  width: 100%;
+
+  display: block;
+  margin-bottom: 3em;
+}
+
+.collection .content {
+  width: 498px;
+  height: 257px;
+
+  float: left;
+  margin-top: 6em;
+
+  background: linear-gradient(
+    111.68deg,
+    rgba(255, 255, 255, 0.29) 7.59%,
+    rgba(255, 255, 255, 0.39) 102.04%
+  );
+  border: 3px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(22px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 0px 61px 0px 0px;
+}
+
+.content h2 {
+  padding: 0 1em;
+}
+
+.collection .content .col_text {
+  padding: 0.5em 1em;
+
+  font-size: 36px;
+}
+
+.collection .content p {
+  padding: 0 2em;
+
+  font-size: 18px;
+}
+
+.collection .drop-shadow {
+  position: relative;
+  width: 505px;
+  height: 39px;
+
+  background: rgba(186, 157, 155, 0.31);
+  background-blend-mode: overlay;
+  filter: blur(41px);
+
+  /* background: #000; */
+}
+
+.food_collection {
+  position: relative;
+  width: 650px;
+  height: 330px;
+  /* top: 16.25em; */
+  /* grid-column: 2/3;
+  grid-row: 2/3; */
+  /* margin: 20em 0 10em 0; */
+  left: 50%;
+}
+
+.food_collection .food_img {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  left: 20px;
+  top: -20px;
+}
+
+.food_collection .food_img img {
+  object-fit: cover;
+  width: 500px;
+  height: 300px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 35px 0px 0px 0px;
+}
+
+.food_collection .rectang {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+}
+
+.text {
+  position: absolute;
+  top: 6em;
+  left: 40em;
+}
+
+.text p {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.collection .react-wavy-transitions__wavy-link,
+.text .col_text {
+  font-size: 36px;
+}
+
+.closer {
+  top: 10em;
+  left: 25em;
+}
+
+.cloth_collection {
+  position: relative;
+  width: 530px;
+  height: 400px;
+  left: 10%;
+  /* grid-column: 1/2;
+  grid-row: 3/4;
+  margin-left: 15em; */
+  margin-bottom: 10em;
+}
+
+.decor_collection {
+  position: relative;
+  width: 530px;
+  height: 400px;
+  left: 50%;
+  /* grid-column: 2/3;
+  grid-row: 4/5;
+  margin-left: 15em; */
+}
+
+.decor_collection img,
+.cloth_collection img {
+  object-fit: cover;
+  width: 300px;
+  height: 400px;
+  border-radius: 0px 35px 0px 0px;
+}

@@ -1,0 +1,72 @@
+.section {
+  position: relative;
+  top: 4rem;
+
+  /* background: #fff; */
+}
+
+.filter_btn {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+  margin: 1em 0;
+}
+
+.section h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000;
+  font-family: "Montserrat", sans-serif;
+  /* background: #000; */
+  padding-left: 1.3em;
+}
+
+.filter_btn label {
+  margin-left: 4em;
+  cursor: pointer;
+  /* color: #999; */
+  color: #2e2e2e;
+  font-size: 1.5rem;
+  font-weight: 900;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.filter_btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.filter_btn .checkmark {
+  position: absolute;
+  top: 0;
+  left: 2em;
+  height: 2rem;
+  width: 2rem;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.filter_btn .checkmark::after {
+  content: "\f00c";
+  position: absolute;
+  font-family: fontAwesome;
+  font-size: 1em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d4a0a2;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.filter_btn input:checked ~ .checkmark::after {
+  opacity: 1;
+  visibility: visible;
+}

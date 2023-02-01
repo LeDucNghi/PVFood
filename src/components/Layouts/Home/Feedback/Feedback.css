@@ -1,0 +1,174 @@
+.feedback {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* background: #000; */
+  margin-bottom: 5em;
+}
+
+.feedback_rectang {
+  position: absolute;
+
+  width: 400px;
+  height: 500px;
+
+  left: 370px;
+  top: 30%;
+  transform: translateY(-30%);
+
+  background: #fdf2f6;
+  border: 1px solid #000000;
+}
+
+.feedback_img {
+  position: absolute;
+  left: 403px;
+  top: 10%;
+  transform: translateY(-10%);
+}
+
+.feedback_img img {
+  width: 400px;
+  height: 600px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 0px 50px;
+}
+
+.feedback_content {
+  position: relative;
+  width: 550px;
+  height: 380px;
+  left: 65em;
+  top: 21em;
+  /* background: #000; */
+}
+
+.feedback_content h2 {
+  font-family: " Ariata Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 30px;
+  /* or 83% */
+  padding: 1.2em 2em;
+  color: #000;
+}
+
+.feedback_content .title {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  left: 5em;
+  top: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #d4a0a2;
+  border-radius: 15px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 10px 10px 30px #c4c4c4, -10px -10px 30px #ffffff;
+}
+
+.feedback_btn {
+  width: 20rem;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.c-btn {
+  position: absolute;
+  top: 12em;
+  left: 5em;
+  width: 180px;
+  margin-top: 3em;
+  transition: 0.3s all ease-in-out;
+}
+
+button.feedback_btn .circlee {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  padding: 0.5em 1em;
+  border-radius: 1.625rem;
+}
+
+button.feedback_btn .circlee .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.feedback_btn .circlee .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.feedback_btn .circlee .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button.feedback_btn .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0rem 0;
+  margin: 0 0 0 4rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  font-family: " Ariata Display";
+  white-space: nowrap;
+}
+
+button:hover .circlee {
+  width: 110%;
+}
+
+button:hover .circlee .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(1rem, 0);
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+}

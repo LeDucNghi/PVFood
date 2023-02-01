@@ -1,0 +1,47 @@
+.timeline_container {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+  /* height: 140px; */
+  background: #000;
+  color: #fff;
+}
+
+.timeline_container .time_line {
+  position: absolute;
+
+  width: 100%;
+  height: 5px;
+  background: #2dc258;
+  font-size: 14px;
+  line-height: 16.8px;
+  /* margin: 0px 70px; */
+  z-index: 10;
+}
+
+.timeline_container .stepper_line {
+  position: relative;
+  margin: 0 1.5em;
+  width: 20%;
+  height: 140px;
+  background: violet;
+  background: #000;
+}
+
+.stepper_line .stepper_icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid #2dc258;
+}
+
+.stepper_line .stepper_content {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 14px;
+  white-space: wrap;
+}

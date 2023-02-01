@@ -1,0 +1,84 @@
+.banner-glass {
+  height: 60%;
+  width: 100%;
+  /* background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/jess-harding-lqT6NAmTaiY-unsplash.jpg"); */
+  /* background-image: url("cereal.jfif"); */
+  background-image: url("https://images.unsplash.com/photo-1564149504534-40d664642e4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(10em);
+  filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.food_banner {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin: 6em 0 0 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("https://images.unsplash.com/photo-1564149504534-40d664642e4c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80");
+  background-size: cover;
+  background-position: center;
+
+  overflow: hidden;
+}
+
+.drop-shadow1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));
+}
+
+.drop-shadow1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10em;
+  height: calc(100% - 20em);
+  width: calc(100% - 20em);
+  border-top: 2px solid rgba(225, 225, 225, 0.2);
+  border-left: 1px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.3);
+  z-index: 2;
+}
+
+.drop-shadow1 span {
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+  font-size: 4em;
+  font-weight: 600;
+  letter-spacing: 0.75em;
+  padding-left: 0.375em;
+  font-family: "Krona One", sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  .banner-glass {
+    clip-path: inset(5em);
+  }
+  .drop-shadow1::before {
+    top: 5em;
+    width: calc(100% - 10px);
+  }
+  .drop-shadow1 span {
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .drop-shadow1 span {
+    font-size: 2em;
+  }
+}

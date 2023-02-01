@@ -1,0 +1,101 @@
+.success_container {
+  position: relative;
+
+  top: 4em;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+  height: 80vh;
+
+  border-radius: 15px;
+  box-shadow: 10px 10px 10px #c4c4c4, -10px -10px 10px #ffffff;
+}
+
+.success_container .success_img {
+  position: relative;
+  width: 50%;
+  /* background: red; */
+}
+
+.success_container .success_content {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 50%;
+  padding: 0 15px;
+  text-align: center;
+  /* background: pink; */
+}
+
+.success_container .success_content .success_button_contain {
+  display: flex;
+  justify-content: space-between;
+
+  width: 55%;
+}
+
+.success_container .success_content .success_button_contain .success_button {
+  background-color: #d4a0a2;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.success_container
+  .success_content
+  .success_button_contain
+  .success_button:hover {
+  background-color: #d4a0a2;
+}
+
+.success_container .success_img img:nth-child(1) {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.success_container .success_img img:nth-child(2) {
+  position: absolute;
+  object-fit: contain;
+  width: 90%;
+  height: 80%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-30%, -50%);
+  z-index: 1;
+}
+
+.success_container .success_content h1 {
+  color: #d4a0a2;
+  font-size: 5em;
+  font-family: "Rage Italic";
+  font-style: italic;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.success_container .success_content p {
+  font-family: "Ariata Display";
+  font-weight: 500;
+  /* padding-top: 1em; */
+  font-size: 1.5em;
+}
+
+.success_container
+  .success_content
+  .css-jh47zj-MuiButtonBase-root-MuiButton-root {
+  /* background: pink; */
+  font-family: "Ariata Display";
+  font-weight: 500;
+  font-size: 1.5em;
+}

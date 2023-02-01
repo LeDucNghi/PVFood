@@ -1,0 +1,553 @@
+.detail_container {
+  position: relative;
+  top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1445px;
+  height: 763px;
+  /* background: #000; */
+  margin: 0em auto;
+}
+
+.img_detail {
+  width: 818px;
+  height: 100%;
+  /* background: #fff; */
+}
+
+.img_item_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90px;
+  height: 250px;
+  /* background: #000; */
+  list-style-type: none;
+}
+
+.img_item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 1em;
+}
+
+.img_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.img_show {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-88%, -50%);
+  /* background: #000; */
+  width: 708px;
+  height: 643px;
+  border-radius: 25px;
+}
+
+.img_show img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.product {
+  position: relative;
+  height: 76px;
+  width: 627px;
+  height: 763px;
+  /* background: pink; */
+}
+
+.product_info {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: auto;
+  /* background: yellow; */
+}
+
+.hs {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* background: #000; */
+  font-size: 22px;
+  font-weight: 900;
+  padding: 0 1em;
+  margin: 1em 0;
+  font-family: "Krona One", sans-serif;
+}
+
+.hs .product_name {
+  width: 300px;
+  text-align: left;
+  /* background: #000; */
+  font-family: "Montserrat", sans-serif;
+}
+
+.description {
+  position: relative;
+  right: 0;
+  margin: 1em 0;
+  line-height: 1.5em;
+  width: 627px;
+  height: auto;
+  /* background: #000; */
+  padding: 1em 1em;
+  text-align: justify;
+  font-size: 14px;
+  /* font-weight: 600; */
+  color: #777777;
+  font-family: "Krona One", sans-serif;
+}
+
+.product_interact {
+  position: relative;
+  right: 0;
+  /* background: #000; */
+  width: 627px;
+  height: 114px;
+  margin: 1em 0;
+}
+
+.product_qty {
+  width: 100%;
+  /* background: red; */
+  margin-bottom: 1em;
+  display: flex;
+  padding: 0 1em;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.obj {
+  position: relative;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e4e4e4;
+  color: #777777;
+  border-radius: 8px;
+  margin-left: 1em;
+  padding: 1em;
+}
+
+.obj span {
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Krona One", sans-serif;
+}
+
+.add_btn,
+.remove_btn {
+  padding-bottom: 0.2em;
+  outline: none;
+  background: transparent;
+  border: none;
+  font-weight: 600;
+  font-size: 1.5em;
+  z-index: 10;
+}
+
+.product_qty p {
+  font-family: "Krona One", sans-serif;
+  padding-top: 0.5em;
+}
+
+.addToCart {
+  padding: 0 1em;
+}
+
+.addToCart button {
+  margin-top: 0.5em;
+  border: none;
+  width: 206px;
+  height: 50px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 30px;
+  background: #eda80a;
+  font-family: "Krona One", sans-serif;
+  color: #fcf1d7;
+}
+
+.addToCart button:hover {
+  background: #eda80a;
+}
+
+.product_tag {
+  position: relative;
+
+  width: 90%;
+  height: auto;
+  margin: 7em auto 0 auto;
+  /* background: #000; */
+}
+
+.product_tag h2 {
+  padding-top: 1em;
+  text-align: center;
+  color: #000;
+  font-family: "Krona One", sans-serif;
+}
+
+.tags {
+  position: relative;
+  width: 100%;
+  /* background: pink; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag_items {
+  position: relative;
+  display: flex;
+
+  width: 452px;
+  height: 234px;
+  margin-top: 1.5em;
+  padding: 0 1em;
+  /* background: #000; */
+}
+
+.product_tag .css-krdrhq-MuiTypography-root {
+  font-size: 14px;
+  font-family: "Krona One", sans-serif;
+}
+
+.tag_img {
+  position: relative;
+  width: 214px;
+  height: 214px;
+  border-radius: 50%;
+}
+
+.tag_img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tag_info {
+  width: 214px;
+  height: 214px;
+  padding: 0 1em;
+}
+
+.product_tag .css-179ugiy-MuiTypography-root,
+.tag_description {
+  height: 80px;
+  /* background: #000; */
+
+  display: -webkit-box;
+  font-size: 1em;
+  color: #777777;
+
+  overflow: hidden;
+  text-align: left;
+
+  text-overflow: ellipsis;
+  line-clamp: 3;
+
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  font-family: "Krona One", sans-serif;
+}
+
+.tag_prices {
+  font-family: "Krona One", sans-serif;
+}
+
+.cart_icon {
+  position: absolute;
+  left: 0.5em;
+  top: 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  background: #eda80a;
+  border-radius: 50%;
+}
+
+.reviews {
+  position: relative;
+  width: 1445px;
+  /* height: 1604px; */
+  /* background: red; */
+  margin: 0 auto;
+}
+
+.rating {
+  position: relative;
+  top: 4em;
+  margin: 4em auto;
+  width: 1355px;
+  height: 350px;
+  /* background: #fff; */
+}
+
+.rating h2 {
+  font-size: 35px;
+  font-weight: 300;
+  font-family: "Krona One", sans-serif;
+  text-align: center;
+}
+
+.rating_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating_items {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 354px;
+  height: 278px;
+  /* background: #000; */
+}
+
+.rating_items p {
+  text-align: center;
+}
+
+.comments {
+  position: relative;
+  margin: 2em auto;
+  width: 1355px;
+  height: 500px;
+  display: flex;
+  /* background: red; */
+}
+
+.global_rating {
+  position: relative;
+  width: 40%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.global_rating h3 {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  font-family: "Krona One", sans-serif;
+}
+
+.average {
+  position: relative;
+
+  margin: 0 auto;
+
+  width: 195px;
+  height: 192px;
+  /* background: #000; */
+
+  /* padding: 4.5em 0; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.avg_number {
+  position: relative;
+  font-weight: 600;
+  font-size: 144px;
+  /* line-height: 32px; */
+
+  letter-spacing: -0.017em;
+  /* padding: 1em 0; */
+
+  color: #ff7337;
+}
+
+.avg_total {
+  white-space: nowrap;
+  position: relative;
+
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.line {
+  position: relative;
+  width: 150px;
+  height: 1px;
+  background: #ffa102;
+}
+
+.comments_detail {
+  position: relative;
+
+  width: 60%;
+  height: 100%;
+  padding: 3em;
+  overflow: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.comments_item {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  /* height: 105px; */
+  /* background: red; */
+  /* margin-bottom: 60px; */
+  padding: 1em;
+
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+
+  /* border-bottom: 0.5px solid #ccc; */
+}
+
+.comments_item .comment_content {
+  position: relative;
+  margin-left: 1em;
+  /* padding-top: 3em; */
+}
+
+.comments_item .comment_avt {
+  position: relative;
+  border-radius: 50%;
+
+  width: 3em;
+  height: 3em;
+}
+
+.comments_item .comment_avt img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.user_comment,
+.comment_info {
+  font-family: "Montserrat", sans-serif;
+}
+
+.comment_info {
+  color: #918c82;
+}
+
+.user_comment {
+  font-size: 17px;
+  color: #918c82;
+}
+
+.cmt_username {
+  font-weight: 600;
+}
+
+.comment_info {
+  width: 100%;
+  display: flex;
+}
+
+.tag_items_modal_container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 90%;
+
+  display: flex;
+
+  /* background-color: red; */
+}
+
+.tag_items_modal_container .left_side {
+  width: 50%;
+  height: 100%;
+  /* background: pink; */
+}
+
+.tag_items_modal_container .right_side .button,
+.tag_items_modal_container .left_side .button {
+  width: 100%;
+  /* height: 100%; */
+  /* border: 1px solid #d4a0a2; */
+  margin-top: 16px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  background: #d4a0a2;
+}
+
+.tag_items_modal_container .left_side .button:hover {
+  background-color: #d4a0a2;
+}
+
+.tag_items_modal_container .left_side img {
+  width: 100%;
+  height: 80%;
+  /* background: #000; */
+  object-fit: cover;
+  background-color: #f7f7f7;
+
+  border-radius: 10px;
+}
+
+.tag_items_modal_container .right_side {
+  width: 50%;
+  height: 100%;
+  background: white;
+
+  padding: 0 16px;
+}
+.tag_items_modal_container .right_side p,
+.tag_items_modal_container .right_side h3:first-child {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.tag_items_modal_container .right_side p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

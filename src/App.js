@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import "./assets/styles/GlobalStyles.css";
+
+import Cookies from "universal-cookie";
+import Footer from "./components/Common/Footer/Footer";
+import Header from "./components/Common/Header/Header";
+import PublicRoutes from "routes/publicRoutes";
+import { fetchAccount } from "features/account/accountThunk";
+import { unregisterAuthObserver } from "features/auth/authThunk";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
 
 function App() {
+  const dispatch = useDispatch();
+  const cookies = new Cookies();
+  const account = cookies.get(`information`);
+
+  useEffect(() => {
+    if (!account) return;
+    dispatch(fetchAccount(account.email));
+  }, [dispatch]);
+
+  useEffect(() => {
+    unregisterAuthObserver();
+
+    return () => unregisterAuthObserver();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+
+      <PublicRoutes isAdmin={true} />
+
+      <Footer />
+    </>
   );
 }
 

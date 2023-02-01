@@ -1,0 +1,285 @@
+/* Google Font 'Poppins'  */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} */
+
+@font-face {
+  font-family: Digital_Font;
+  src: url(fonts/digital-7.ttf);
+}
+
+/* body {
+  width: 100%;
+  height: 100vh;
+  background: #121213;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.card {
+  position: relative;
+  /* width: 500px; */
+  /* width: 100%; */
+  width: 500px;
+  height: 250px;
+  /* border: 0.5px solid #ccc; */
+  margin: 0.5em auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../../../assets/image/bulid.png") no-repeat center
+    center/cover;
+  opacity: 0.5;
+} */
+
+.card .debit_card {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+  font-weight: 600;
+  color: #fff;
+  /* color: #000; */
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.card .bank {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-style: italic;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.card .bank span {
+  font-weight: 300;
+}
+
+.card .chip {
+  position: absolute;
+  width: 60px;
+  height: 45px;
+  background: #e9df4e;
+  border-radius: 5px;
+  top: 60px;
+  left: 25px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.card .chip h6:nth-child(1) {
+  width: 25px;
+  height: 15px;
+  border: 1px solid #000;
+  margin-top: -1px;
+  border-top: 0px;
+  border-left: 0px;
+}
+
+.card .chip h6:nth-child(2) {
+  width: 25px;
+  height: 10px;
+  border: 1px solid #000;
+  margin-top: -1px;
+  border-top: 0px;
+  border-left: 0px;
+}
+
+.card .chip h6:nth-child(3) {
+  width: 25px;
+  height: 10px;
+  border: 1px solid #000;
+  margin-top: -1px;
+  border-top: 0px;
+  border-left: 0px;
+}
+
+.card .chip h6:nth-child(4) {
+  width: 25px;
+  height: 18px;
+  border: 1px solid #000;
+  margin-top: -1px;
+  border-top: 0px;
+  border-left: 0px;
+}
+
+.card .chip h6:nth-child(5) {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  border-bottom: 1px solid #000;
+  top: 0;
+  left: 25px;
+}
+
+.card .chip h6:nth-child(6) {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  border-bottom: 1px solid #000;
+  top: 10px;
+  left: 25px;
+}
+
+.card .chip h6:nth-child(7) {
+  position: absolute;
+  width: 25px;
+  height: 10px;
+  border: 1px solid #000;
+  top: 15px;
+  left: 45px;
+}
+
+.card .chip h6:nth-child(8) {
+  position: absolute;
+  width: 25px;
+  height: 10px;
+  border: 1px solid #000;
+  border-top: 0px;
+  top: 25px;
+  left: 45px;
+}
+
+.card .chip h6:nth-child(9) {
+  position: absolute;
+  width: 25px;
+  height: 15px;
+  border: 1px solid #000;
+  border-top: 0px;
+  top: 35px;
+  left: 45px;
+}
+
+.card .number {
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  /* border: 1px solid #fff; */
+  top: 130px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .number h6 {
+  color: #000;
+  font-size: 25px;
+  font-family: Digital_Font;
+  letter-spacing: 3px;
+}
+
+.card .wave {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 124px;
+  right: 20px;
+}
+
+.card .ex_date {
+  position: absolute;
+  top: 165px;
+  left: 25px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.card .ex_date span {
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 10px;
+}
+
+.card .ex_date h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 12px;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.card .ex_date h3 span {
+  font-size: 12px;
+  margin: 0px 2px;
+}
+
+.card .name {
+  position: absolute;
+  top: 195px;
+  left: 25px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #000;
+}
+
+.card .cvv {
+  position: absolute;
+  color: #fff;
+  top: 230px;
+  left: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.card .cvv h5 {
+  font-size: 14px;
+  margin-left: 5px;
+  background: #121213;
+  padding: 1px 10px;
+  border-radius: 3px;
+  letter-spacing: 1px;
+}
+
+.card .visa {
+  position: absolute;
+  bottom: -1em;
+  right: 5px;
+  width: 110px;
+  height: 80px;
+}
+
+/* .card:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(184, 184, 184, 0.1);
+} */
+
+/* .card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../../../assets/image/crystal-diamond.jpg") no-repeat center
+    center/cover;
+} */
+/* background: rgb(184, 184, 184, 0.1); */
+/* background: red; */
+/* background: url("../../../assets/image/bulid.png") no-repeat center
+  center/cover; */

@@ -1,0 +1,557 @@
+.banner_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  margin: 6em 0 4em 0;
+
+  /* height: 800px; */
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* background: #000; */
+}
+
+.banner_left {
+  position: relative;
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 3em 0;
+  /* background: #000; */
+}
+
+.banner_right {
+  position: relative;
+  width: 30%;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  /* background: #000; */
+}
+
+.banner_contain-circle {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  /* height: 60rem;
+  width: 40%; */
+  /* background: #000; */
+}
+
+.banner_circle-middle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fdf2f6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid #c89b7e;
+}
+
+.banner_circle-middle button {
+  border: none;
+  padding: 0.7em;
+  border-radius: 50%;
+  background: none;
+}
+
+.banner_circle-middle .small_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  color: #fff;
+  background: #c89b7e;
+  border-radius: 50%;
+}
+
+.banner_circle-middle .circle_star {
+  left: -1.4em;
+}
+
+.banner_circle-middle .circle_plus {
+  right: 3em;
+  bottom: 2.5em;
+}
+
+.banner_circle-item {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: #fdf2f6;
+}
+
+.banner_circle-item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.left {
+  position: absolute;
+  width: 80px;
+  height: 100px;
+}
+
+.line {
+  top: 13em;
+  left: -1em;
+  transform: rotate(-7deg);
+}
+
+.linee {
+  top: 22.2em;
+  left: -1.1em;
+
+  transform: rotate(-32deg);
+}
+
+.linee-bottom {
+  right: 1.5em;
+  bottom: 6.7em;
+  transform: rotate(193deg);
+}
+
+.line-bottom {
+  bottom: 0;
+  right: 9em;
+  transform: rotate(-138deg);
+}
+
+.banner_thumb {
+  position: relative;
+  width: 100%;
+
+  margin: 1em 0;
+}
+
+.thumb {
+  list-style: none;
+  padding: 0 2em;
+  /* background: red; */
+  font-family: "Ariata Display";
+}
+
+.thumb li {
+  padding: 0.5em 0;
+  font-size: 1.3em;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* .thumb li::before {
+  content: "";
+  position: absolute;
+  left: 1.5em;
+  background-color: #253b80;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+} */
+
+.thumb li button.feedback_btn .selected,
+.thumb li button.feedback_btn .circlee {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  width: 1rem;
+  height: 3rem;
+  /* background: #282936; */
+  background: #c89b7e;
+  padding: 0.5em 1em;
+  border-radius: 1.625rem;
+}
+
+.thumb li button.feedback_btn .selected {
+  width: 120%;
+}
+
+.thumb li button.feedback_btn .selected .icon,
+.thumb li button.feedback_btn .circlee .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  /* position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: 0 auto; */
+  background: #fff;
+}
+
+.thumb li button.feedback_btn .selected .icon.arrow,
+.thumb li button.feedback_btn .circlee .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.thumb li button.feedback_btn .selected .icon.arrow::before,
+.thumb li button.feedback_btn .circlee .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* .thumb li button.feedback_btn .selectedText, */
+.thumb li button.feedback_btn .button-text {
+  -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  inset: 0;
+  /* margin: 0 0 0 4rem; */
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: left;
+  padding: 0 0.5em;
+  /* text-transform: uppercase; */
+  font-size: 18px;
+  font-family: " Ariata Display";
+  white-space: nowrap;
+  /* background: #000; */
+}
+
+.thumb li button.feedback_btn .button-text.selectedText {
+  color: #fff;
+}
+
+.thumb li button:hover .circlee {
+  width: 120%;
+}
+
+.thumb li button .circlee.selected .icon.arrow,
+.thumb li button:hover .circlee .icon.arrow {
+  background: #fff;
+  -webkit-transform: translate(1rem, 0);
+  transform: translate(1rem, 0);
+}
+
+.thumb li button .selected .icon.arrow {
+  position: absolute;
+  left: 2em;
+  /* transform: translate(0rem, 0); */
+}
+
+.thumb li button:hover .button-text {
+  color: #fff;
+}
+
+.banner_warning {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* background: #000; */
+  padding: 0em 2em;
+}
+
+.banner_warning .warning_time {
+  font-family: "Ariata Display";
+  font-weight: 500;
+  padding-top: 1em;
+  font-size: 3.75em;
+  /* color: violet; */
+}
+
+.banner_warning .warning_hrs {
+  font-family: "Ariata Display";
+  margin: 5.2em 0 0 0.5em;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+
+  color: rgba(0, 0, 0, 0.4);
+
+  font-size: 1.2em;
+  /* line-height: 1.5em; */
+  /* margin: 2.9em 0 0 0.5em; */
+}
+.banner_warning .warning_text {
+  font-family: "Krona One", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.banner_contain-content {
+  margin: 0 auto;
+  width: 35em;
+  color: #000;
+}
+
+.content_text {
+  position: relative;
+  right: 1em;
+  width: 100%;
+  background: linear-gradient(
+    111.68deg,
+    rgba(255, 255, 255, 0.29) 7.59%,
+    rgba(255, 255, 255, 0.39) 102.04%
+  );
+  border: 3px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50px;
+  box-sizing: border-box;
+  backdrop-filter: blur(22px);
+  padding: 1em;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+
+  box-shadow: 10px 10px 10px #d4d4d4, -10px -10px 10px #f8f8f8;
+}
+
+.content_text p {
+  padding: 0 1.5em;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "Ariata Display";
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.content_text .content_btn {
+  position: relative;
+  /* left: 0; */
+  width: 15em;
+  padding: 0 1.8em;
+
+  display: flex;
+  justify-content: space-between;
+
+  /* background: #000; */
+}
+
+.content_btn .react-wavy-transitions__wavy-link {
+  position: relative;
+
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: right;
+
+  padding: 1em;
+  /* background: violet; */
+}
+
+.content_btn hr {
+  width: 3.5em;
+  height: 1px;
+  background: black;
+}
+
+.content_btn .react-wavy-transitions__wavy-link::before {
+  background: none repeat scroll 0 0 transparent;
+  bottom: -5px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.content_btn .react-wavy-transitions__wavy-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.content_text img {
+  position: absolute;
+  /* top: 170px; */
+  /* left: 220px; */
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 80px;
+}
+
+.drop-shadow {
+  position: absolute;
+  margin-top: 3em;
+  width: 433.07px;
+  height: 20.62px;
+
+  background: rgba(255, 255, 255, 0.1);
+  /* background: violet; */
+  background-blend-mode: overlay;
+  filter: blur(40px);
+}
+
+.banner_note {
+  position: relative;
+  margin-bottom: 0 auto;
+  width: 100%;
+  height: 100px;
+  padding: 0 2em;
+  /* background: black; */
+}
+
+.banner_note .note {
+  font-family: "Ariata Display";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: left;
+  font-weight: 600;
+  /* background: red; */
+}
+
+@media only screen and (max-width: 320px) {
+  .banner_container {
+    width: 100vh;
+    background: #000;
+  }
+
+  /* .banner_left {
+    width: 30%;
+    background: red;
+  } */
+
+  /* .banner_contain-circle {
+    display: none;
+  } */
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .banner_container {
+    width: 100%;
+    background: #000;
+  }
+
+  .banner_left {
+    /* width: 15em; */
+
+    width: 30%;
+    /* background: red; */
+  }
+
+  .banner_note {
+    background: white;
+    height: auto;
+    margin-bottom: 1em;
+  }
+
+  .banner_note .note {
+    font-size: 12px;
+    line-height: 15px;
+    white-space: nowrap;
+    padding: 0 0 0 1em;
+    /* line-height: 2rem; */
+  }
+
+  .banner_thumb {
+    background: #fff;
+    margin-bottom: 1em;
+  }
+
+  .thumb {
+    padding: 0;
+  }
+
+  .thumb li {
+    padding: 0.5em 1.5em 0.5em 0;
+    font-size: 1em;
+  }
+
+  .thumb li::before {
+    height: 1.5em;
+    width: 1.5em;
+  }
+
+  .banner_right {
+    /* display: none; */
+    width: 15em;
+    background: red;
+  }
+
+  .banner_contain-content {
+    width: 28em;
+    height: 8em;
+  }
+
+  .content_text {
+    /* background: #000; */
+  }
+
+  .banner_contain-circle {
+    width: 25em;
+    height: 25em;
+
+    background-color: #253b80;
+  }
+
+  .banner_circle-item {
+    width: 20em;
+    height: 20em;
+  }
+
+  .banner_circle-middle .small_circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5em;
+    color: #fff;
+    background: #c89b7e;
+    border-radius: 50%;
+  }
+
+  .banner_circle-middle .circle_plus {
+    right: 1em;
+    bottom: 2em;
+  }
+
+  .banner_circle-middle .circle_star {
+    left: -1em;
+  }
+}
+
+/* @media only screen and (min-width: 768px) {
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+} */

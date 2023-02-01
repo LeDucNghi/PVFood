@@ -1,0 +1,20 @@
+.submit_request .register {
+  color: #fff;
+  width: 100%;
+
+  background-color: #d4a0a2;
+}
+
+.submit_request {
+  bottom: 5em;
+  left: 0;
+}
+
+.request {
+  top: 15em;
+}
+
+.forgot_contain {
+  width: 400px;
+  position: relative;
+}
