@@ -47,15 +47,8 @@ nav {
   font-style: italic;
   font-weight: 400;
   text-shadow: none;
-  /* background: #000; */
   z-index: 1;
-  /* text-decoration: none; */
 }
-/* section.active nav {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(200px);
-} */
 
 nav .menu-item {
   color: white;
