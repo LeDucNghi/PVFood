@@ -1,6 +1,9 @@
 import "./Connect.css";
 
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { Images } from "constants/images";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 Connect.propTypes = {};
 
@@ -19,7 +22,7 @@ function Connect(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <i className="fa fa-facebook" aria-hidden="true"></i>
+                <FacebookIcon className="fa" />
               </a>
             </li>
             <li>
@@ -29,7 +32,7 @@ function Connect(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <i className="fa fa-instagram" aria-hidden="true"></i>
+                <InstagramIcon className="fa" />
               </a>
             </li>
             <li>
@@ -39,7 +42,7 @@ function Connect(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <i className="fa fa-github" aria-hidden="true"></i>
+                <GitHubIcon className="fa" />
               </a>
             </li>
             <li>

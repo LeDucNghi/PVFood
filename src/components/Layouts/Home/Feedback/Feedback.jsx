@@ -20,7 +20,11 @@ function Feedback(props) {
         <div className="title">
           <p>Feedback</p>
         </div>
-        <h2>Some Feedback from customers</h2>
+
+        <h2>
+          Some Feedback <br /> from customers
+        </h2>
+
         <div className="c-btn">
           <button className="feedback_btn">
             <span className="circlee" aria-hidden="true">

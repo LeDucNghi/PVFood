@@ -1,9 +1,9 @@
 import "./Header.css";
 import "./HeaderActive.css";
 
-import { doc, updateDoc } from "firebase/firestore";
 import {
   getFirestoreCart,
+  handleChangeUserFirestoreCart,
   handleFetchAll,
 } from "features/products/productThunk";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,7 +16,6 @@ import Navbar from "./Navbar";
 import Search from "features/products/components/Search";
 import Toggles from "./Toggles";
 import { WavyLink } from "react-wavy-transitions";
-import { db } from "constants/firebase";
 import { fetchNotifications } from "features/account/accountThunk";
 import { selectAccountDetail } from "features/account/accountSlice";
 import { selectListCart } from "features/cart/cartSlice";
@@ -41,26 +40,18 @@ function Header() {
     dispatch(handleFetchAll());
     if (accountDetail) {
       dispatch(getFirestoreCart(accountDetail));
-      dispatch(fetchNotifications(accountDetail.email));
+      dispatch(fetchNotifications(accountDetail.data.email));
     }
   }, [dispatch, accountDetail]);
 
   useEffect(() => {
-    if (accountDetail) handleChangeUserFirestoreCart();
-  }, [cartStorage]);
+    if (accountDetail) dispatch(handleChangeUserFirestoreCart());
+  }, [cartStorage, accountDetail]);
 
   window.addEventListener("scroll", function () {
     const Header = this.document.querySelector("header");
     Header.classList.toggle("sticky", window.scrollY > 0);
   });
-
-  const handleChangeUserFirestoreCart = async () => {
-    const cartRef = await doc(db, "users", `${accountDetail.data.email}`);
-
-    await updateDoc(cartRef, {
-      cart: cartStorage,
-    });
-  };
 
   if (pathname === `/login` || pathname === `/register`) return <></>;
   if (pathname === `/admin`) return <></>;

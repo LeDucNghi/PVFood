@@ -233,6 +233,18 @@ export const getFirestoreCart =
     } else dispatch(setFirebaseCart(localCart));
   };
 
+export const handleChangeUserFirestoreCart =
+  () => async (dispatch, getState) => {
+    const account = getState().account.accountDetail;
+
+    const localCart = getState().cart.list;
+
+    if (account && account.cart) {
+      dispatch(setFirebaseCart(account.cart));
+      // localStorage.setItem("cart", accountDetail.cart);
+    } else dispatch(setFirebaseCart(localCart));
+  };
+
 export const handleRatingChange = (
   event,
   newValue,

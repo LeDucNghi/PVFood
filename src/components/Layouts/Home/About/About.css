@@ -9,8 +9,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* background: violet; */
 }
 
 .about_rectang {
@@ -18,22 +16,24 @@
   margin: 0 auto;
   width: 400px;
   height: 550px;
-  background: transparent;
   border: 1px solid black;
 }
 
 .about_info {
   position: relative;
-  width: 500px;
-  height: 310px;
-  /* left: 80em; */
-  right: 10%;
-  top: -10em;
+
+  width: 50%;
+
+  right: 5em;
+  bottom: 10em;
+
   z-index: 1;
 }
+
 .info_content {
-  width: 621px;
-  height: 432.28px;
+  width: 100%;
+  height: 100%;
+  padding: 1.5em 0;
 
   background: linear-gradient(
     111.68deg,
@@ -41,14 +41,14 @@
     rgba(255, 255, 255, 0.39) 102.04%
   );
   border: 3px solid rgba(255, 255, 255, 0.28);
-  box-sizing: border-box;
   backdrop-filter: blur(25px);
   border-radius: 61px;
   box-shadow: 8px 8px 16px #c4c4c4, -8px -8px 16px #ffffff;
 }
 
 .info_content h2 {
-  padding: 1em 1em 0.5em 1em;
+  padding: 0.5em 1em;
+  /* padding: 1em 1em 0.5em 1em; */
   font-family: "Rage Italic";
   font-style: italic;
   font-weight: normal;
@@ -95,11 +95,10 @@
 
 .track {
   position: absolute;
-  z-index: -1;
-  top: 45rem;
-  left: 30rem;
-  width: 18rem;
-  height: 18rem;
+  top: 25rem;
+  left: 15rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   border: 1px solid #000;
   background: transparent;
@@ -108,8 +107,6 @@
 .circle {
   position: absolute;
   z-index: 1;
-  top: 0rem;
-  left: 0rem;
   width: 100%;
   height: 100%;
   border-radius: 50%;

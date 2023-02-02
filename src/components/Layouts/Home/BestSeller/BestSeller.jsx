@@ -1,12 +1,15 @@
 import "./BestSeller.css";
 
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { Images } from "constants/images";
 
 function BestSeller(props) {
   return (
     <div className="best-seller">
       <div className="sell_content">
-        <h2>Just your custom prescription</h2>
+        <h2>
+          Just your <br /> custom <br /> prescription
+        </h2>
 
         <p>
           A journey into CBD Cannabis, our Worlds created to accompany you in
@@ -14,8 +17,9 @@ function BestSeller(props) {
         </p>
 
         <h4>$50.000</h4>
+
         <div className="content_icon">
-          <i className="fa fa-shopping-bag" aria-hidden="true"></i>
+          <AddShoppingCartIcon fontSize="large" />
         </div>
       </div>
       <div className="sell_img">

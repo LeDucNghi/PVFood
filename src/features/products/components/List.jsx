@@ -1,20 +1,10 @@
 import "./styles/Product.css";
 
-import {
-  addProduct,
-  selectListCart,
-  updateQty,
-} from "features/users/cart/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
-
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import QuickView from "./QuickView";
-import Swal from "sweetalert2";
 import Tooltip from "@mui/material/Tooltip";
 import VisibilityIcon from "@mui/icons-material/Visibility";
-import { WavyLink } from "react-wavy-transitions";
 import { useState } from "react";
 
 export default function List({ addToCart, productLists }) {
@@ -64,12 +54,6 @@ export default function List({ addToCart, productLists }) {
                         </IconButton>
                       </Tooltip>
                     </div>
-                    {/* <button
-                      onClick={() => showQuickView(item)}
-                      className="buy-item"
-                    >
-                      Quick view
-                    </button> */}
                   </span>
                 </li>
               );

@@ -5,13 +5,16 @@
   overflow: hidden;
   margin: 10em 0 5em 0;
   /* background: #000; */
+  font-size: 15px;
 }
 
 .connect .connect_contain {
   position: relative;
-  height: 900px;
+
+  height: 60em;
+
   left: 0px;
-  top: 40px;
+  top: 2.7em;
 
   background: #362a82;
   border-radius: 200px 0px 0 0;
@@ -51,6 +54,7 @@
 .connect_social .sci li .icon {
   position: relative;
   display: inline-block;
+
   width: 150px;
   height: 150px;
 
@@ -68,6 +72,11 @@
   cursor: pointer;
 }
 
+.connect_social .sci li .icon .fa {
+  width: 80px;
+  height: 80px;
+}
+
 .connect_social .sci li .icon img {
   width: 150px;
   height: 150px;
@@ -77,9 +86,11 @@
 .connect_social .sci li .icon:hover.facebook {
   color: #1877f2;
 }
+
 .connect_social .sci li .icon:hover.instagram {
   color: rgb(248, 32, 0);
 }
+
 .connect_social .sci li .icon:hover.github {
   color: #000;
 }
@@ -96,7 +107,8 @@
 .connect_img {
   position: absolute;
   right: 0;
-  top: 245px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .connect_img img {

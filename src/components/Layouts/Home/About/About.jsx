@@ -31,7 +31,6 @@ function About(props) {
             enterprise that we have to rely on to solve the food crisis.
           </p>
         </div>
-        {/* <div className="drop-shadow"></div> */}
       </div>
     </div>
   );

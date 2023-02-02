@@ -33,6 +33,7 @@ function Collection(props) {
             Food
           </WavyLink>
         </div>
+
         <div className="rectang"></div>
         <div className="food_img">
           <img src={Images.cerealsImg} alt="" />

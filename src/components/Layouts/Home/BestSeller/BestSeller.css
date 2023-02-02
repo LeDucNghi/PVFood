@@ -4,76 +4,86 @@
   height: 100vh;
 
   margin-top: 5em 0 10em 0;
-  /* background: #000; */
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  font-size: 15px;
 }
 
 .sell_content {
-  position: absolute;
-  width: 700px;
-  height: 600px;
+  position: relative;
+
+  width: 47em;
+  height: 35em;
+
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+
   left: 0;
+  padding: 0 8em;
+
   z-index: 2;
   background: #362a82;
   border-radius: 0px 150px 0px 0px;
 }
 
 .sell_content h2 {
+  margin-bottom: 1em;
   color: #fdf2f6;
-  padding: 3.5em 9em;
-  margin-left: -5.5em;
-  font-size: 36px;
+  font-size: 2.5em;
   line-height: 35px;
   font-family: "Ariata Display";
 }
 
 .sell_content p {
-  padding: 0 8em;
+  margin-bottom: 1em;
+
   color: #fff;
-  margin-top: -5em;
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Ariata Display";
 }
 
 .sell_content h4 {
-  padding: 1em 7em;
   font-family: "Ariata Display";
   color: #fff;
 }
 
 .sell_content .content_icon {
-  position: relative;
-  width: 100px;
-  height: 100px;
+  position: absolute;
+
+  bottom: 2em;
+  left: 0;
+
+  width: 7em;
+  height: 7em;
+
   background: #d4a0a2;
   transform: translate(400%, 80%);
   border-radius: 20px;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.sell_content i {
-  font-size: 3em;
-  color: #000;
-  z-index: 1;
-}
-
 .sell_img {
   position: absolute;
-  left: 36em;
-  top: 19em;
+
+  right: 10em;
+  top: 10em;
   z-index: 1;
+
   /* background: red; */
 }
 
 .sell_img img {
   object-fit: cover;
-  width: 780px;
-  height: 600px;
+  width: 50em;
+  height: 40em;
 
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 0px 0px 150px 0px;
@@ -81,10 +91,12 @@
 
 .sell_rectang {
   position: absolute;
-  width: 815px;
-  height: 577px;
-  left: 36em;
-  top: 16em;
+
+  width: 50em;
+  height: 40em;
+
+  right: 5em;
+  top: 15em;
 
   background: transparent;
   border: 2px solid #000000;

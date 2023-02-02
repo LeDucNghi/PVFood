@@ -76,25 +76,25 @@ export default function Toggles({ data, setOpenDrawer }) {
 const toggles = [
   {
     id: 1,
-    icon: <SearchIcon fontSize="large" />,
+    icon: <SearchIcon fontSize="medium" />,
     title: "Search for products",
     component: "search",
   },
   {
     id: 2,
-    icon: <ShoppingCartIcon fontSize="large" />,
+    icon: <ShoppingCartIcon fontSize="medium" />,
     title: "Your cart",
     component: "cart",
   },
   {
     id: 3,
-    icon: <LocalShippingIcon fontSize="large" />,
+    icon: <LocalShippingIcon fontSize="medium" />,
     title: "Track your order",
     route: "/tracking",
   },
   {
     id: 4,
-    icon: <PersonIcon fontSize="large" />,
+    icon: <PersonIcon fontSize="medium" />,
     title: "Login",
     route: "/login",
   },
