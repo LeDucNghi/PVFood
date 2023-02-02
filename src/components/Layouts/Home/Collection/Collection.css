@@ -17,8 +17,11 @@
   margin-bottom: 3em;
 }
 
+.collection_content .content {
+  font-family: "Ariata Display";
+}
+
 .collection .react-wavy-transitions__wavy-link,
-.content p,
 .text .col_text {
   font-family: "Ariata Display";
   font-style: normal;
@@ -55,8 +58,13 @@
 }
 
 .collection .content {
-  width: 31.3em;
-  height: 16.3em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  width: 30em;
+  height: 15em;
 
   float: left;
   margin-top: 6em;
@@ -66,26 +74,27 @@
     rgba(255, 255, 255, 0.29) 7.59%,
     rgba(255, 255, 255, 0.39) 102.04%
   );
+
+  box-shadow: 0.4px 1.2px 2.2px rgba(0, 0, 0, 0.012),
+    1px 3px 5.3px rgba(0, 0, 0, 0.022), 1.9px 5.6px 10px rgba(0, 0, 0, 0.029),
+    3.4px 10.1px 17.9px rgba(0, 0, 0, 0.037),
+    6.3px 18.8px 33.4px rgba(0, 0, 0, 0.049), 15px 45px 80px rgba(0, 0, 0, 0.07);
   border: 3px solid rgba(255, 255, 255, 0.28);
   backdrop-filter: blur(22px);
-  /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 0px 61px 0px 0px;
 }
 
 .content h2 {
-  padding: 0 1em;
+  padding: 0.5em 1.5em;
 }
 
 .collection .content .col_text {
-  padding: 0.5em 1em;
-
   font-size: 36px;
 }
 
 .collection .content p {
   padding: 0 2em;
-
   font-size: 18px;
 }
 

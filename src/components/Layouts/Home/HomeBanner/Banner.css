@@ -331,6 +331,7 @@
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   /* background: #000; */
 }
@@ -346,7 +347,7 @@
   cursor: pointer;
   text-align: right;
 
-  padding: 1em;
+  padding: 1.5em;
   /* background: violet; */
 }
 
@@ -358,7 +359,7 @@
 
 .content_btn .react-wavy-transitions__wavy-link::before {
   background: none repeat scroll 0 0 transparent;
-  bottom: -5px;
+  bottom: 5px;
   content: "";
   display: block;
   height: 2px;
