@@ -1,11 +1,10 @@
 import "./Ticket.css";
 
 import { Images } from "constants/images";
-import PropTypes from "prop-types";
 import React from "react";
 
 export const Ticket = React.forwardRef(function Ticket(props, ref) {
-  const { ticketName, ticketTime, ticketDescribe, ticketPercent } = props;
+  const { ticketName, ticketTime, ticketPercent } = props;
   return (
     <div className="ticket" ref={ref}>
       <div className="ticket-edge-top-left"></div>

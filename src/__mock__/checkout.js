@@ -47,13 +47,13 @@ export const fakePromoCodes = [
 export const deliveryMethods = [
   {
     id: 1,
-    deliveryName: "Tự lấy hàng",
+    deliveryName: "Self pick-up",
     image: Images.selfPickup,
     checked: true,
   },
   {
     id: 2,
-    deliveryName: "Giao tận nơi",
+    deliveryName: "Delivery",
     image: Images.delivery,
     checked: false,
   },
@@ -91,19 +91,19 @@ export const momoInfo = [
 export const paymentMethods = [
   {
     id: 1,
-    paymentName: "Thanh toán tiền mặt - COD",
+    paymentName: "Payment on delivery",
     paymentDescription: "Payment by Visa or MasterCard credit card",
     image: Images.codPayment,
   },
   {
     id: 2,
-    paymentName: "Chuyển khoản ngân hàng",
+    paymentName: "Banking",
     paymentDescription: "Pay by advance bank transfer",
     image: Images.bankPayment,
   },
   {
     id: 3,
-    paymentName: "Ví điện tử Momo",
+    paymentName: "Momo E-Wallet",
     paymentDescription: "PAYMENT WITH INVOICE WITHIN 30 DAYS with our Partner",
     image: Images.momoPayment,
   },

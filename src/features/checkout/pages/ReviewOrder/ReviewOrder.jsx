@@ -41,37 +41,17 @@ function ReviewOrder({ setValue }) {
         <PaymentInfo setValue={setValue} />
 
         <div className="payment_btn">
-          <Button
-            variant="outlined"
-            type="button"
-            className="button"
-            // onClick={() => navigate(`/product/food`)} // onClick={() => navigator.clipboard.writeText(`bla bla`)}
-          >
+          <Button variant="outlined" type="button" className="button">
             Information
           </Button>
 
-          <Button
-            type="submit"
-            className="button"
-            // disabled={isLoading || !isValid || !dirty} // onClick={showPaymentForm}
-            variant="contained"
-          >
+          <Button type="submit" className="button" variant="contained">
             {isLoading === true ? (
               <CircularProgress size={20} color="success" />
             ) : (
               "Pay"
             )}
           </Button>
-          {/* <button type="button" className="edit" onClick={() => setValue(`1`)}>
-            Information
-          </button>
-          <button type="submit" className="payment">
-            {isLoading === true ? (
-              <CircularProgress size={20} color="success" />
-            ) : (
-              "Pay"
-            )}
-          </button> */}
         </div>
       </form>
     </>

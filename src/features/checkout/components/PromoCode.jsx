@@ -1,6 +1,5 @@
 import { List, ListItem, ListItemButton, Tooltip } from "@mui/material";
 
-import CreditCard from "components/Common/CreditCard/CreditCard";
 import CustomModal from "components/Common/Modal/Modal";
 import { Ticket } from "components/Common/Ticket/Ticket";
 import { fakePromoCodes } from "__mock__";
@@ -20,6 +19,7 @@ export default function PromoCode({ open, setOpen }) {
   };
 
   const style = {
+    width: 600,
     height: 500,
     overflow: "auto",
   };

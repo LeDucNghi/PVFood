@@ -12,6 +12,7 @@
 
   border-radius: 15px;
   box-shadow: 10px 10px 10px #c4c4c4, -10px -10px 10px #ffffff;
+  font-size: 15px;
 }
 
 .success_container .success_img {
@@ -38,13 +39,15 @@
   display: flex;
   justify-content: space-between;
 
-  width: 55%;
+  margin-top: 1em;
+
+  width: 70%;
 }
 
 .success_container .success_content .success_button_contain .success_button {
   background-color: #d4a0a2;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .success_container

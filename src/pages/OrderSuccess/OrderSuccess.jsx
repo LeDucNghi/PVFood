@@ -1,11 +1,11 @@
 import "./OrderSuccess.css";
 
-import Bill from "features/users/products/components/Bill";
+import Bill from "features/products/components/Bill";
 import { Button } from "@mui/material";
 import CustomModal from "components/Common/Modal/Modal";
 import { Images } from "constants/images";
 import { WavyLink } from "react-wavy-transitions";
-import { selectInfo } from "../../features/users/checkout/checkoutSlice";
+import { selectInfo } from "features/checkout/checkoutSlice";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";

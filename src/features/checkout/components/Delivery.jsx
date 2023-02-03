@@ -13,8 +13,8 @@ export default function DeliveryMethods() {
   return (
     <div className="delivery_content">
       <p>
-        Đơn hàng đặt sau 10h và trước 21h30 sẽ được giao trong ngày, còn lại sẽ
-        được giao vào ngày hôm sau. Xin cảm ơn!
+        Orders placed after 10:00 and before 21:30 will be delivered the same
+        day, the rest will be delivered the next day. Thank you!
       </p>
 
       <div className="delivery_label_container">

@@ -6,10 +6,11 @@ import { bankingInfo } from "__mock__";
 export default function BankingModal({ deliverId, open, setOpen }) {
   const style = {
     width: "600px",
-    height: "500px",
-    overflow: "auto",
-    bgcolor: deliverId === 3 ? "none" : "",
+    height: "600px",
+    overflow: deliverId === 3 ? "" : "auto",
+    bgcolor: deliverId === 3 ? "transparent" : "",
     padding: deliverId === 3 ? 0 : "",
+    boxShadow: deliverId === 3 ? "none" : null,
   };
 
   return (
@@ -30,7 +31,7 @@ export default function BankingModal({ deliverId, open, setOpen }) {
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
           }}
           src={Images.momoQR}
           alt=""

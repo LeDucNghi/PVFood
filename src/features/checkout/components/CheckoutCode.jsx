@@ -45,7 +45,7 @@ export default function CheckoutCode({ value, setOpen, open }) {
                   color="primary"
                   component="label"
                 >
-                  <ConfirmationNumberIcon fontSize="large" />
+                  <ConfirmationNumberIcon fontSize="medium" />
                 </IconButton>
               </IconButton>
             </InputAdornment>

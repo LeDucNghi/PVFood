@@ -3,6 +3,7 @@ import { Suspense, lazy } from "react";
 
 import Loading from "components/Common/Loading/Loading";
 import Login from "pages/Auth/Login";
+import OrderSuccess from "pages/OrderSuccess/OrderSuccess";
 import Page404 from "components/Common/NotFound/Page404";
 import ProdDetail from "pages/ProductsDetail/ProdDetail";
 import ProductList from "features/products/components/ProductList";
@@ -119,14 +120,14 @@ export default function PublicRoutes({ isAdmin }) {
     // //   ],
     // // },
 
-    // {
-    //   path: "success",
-    //   element: (
-    //     <Suspense fallback={<Loading />}>
-    //       <OrderSuccess />
-    //     </Suspense>
-    //   ),
-    // },
+    {
+      path: "success",
+      element: (
+        <Suspense fallback={<Loading />}>
+          <OrderSuccess />
+        </Suspense>
+      ),
+    },
 
     {
       path: "checkout",

@@ -10,7 +10,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { selectInfo } from "features/users/checkout/checkoutSlice";
+import { selectInfo } from "features/checkout/checkoutSlice";
 import { useSelector } from "react-redux";
 
 export default function Bill() {
@@ -64,7 +64,7 @@ export default function Bill() {
         <Divider variant="middle" />
 
         <div className="bill_detail_date_id">
-          <p>Hóa đơn: #{info.orderId} </p>
+          <p>Invoice: #{info.orderId} </p>
           <p>{info.billTime} </p>
         </div>
 
@@ -72,7 +72,7 @@ export default function Bill() {
           <img src={Images.logo} alt="" />
         </div>
 
-        <Divider>HÓA ĐƠN</Divider>
+        <Divider>Invoice</Divider>
 
         <div className="bill_detail_info">
           <p>{info.info.userInfo.fullName} </p>

@@ -18,19 +18,19 @@ function PaymentInfo({ setValue }) {
           <div className="contact_content">
             <h4>Shipping address / Billing address</h4>
             <h3>
-              <PersonIcon sx={{ mr: "1em" }} fontSize="large" />
+              <PersonIcon sx={{ mr: "1em" }} fontSize="medium" />
               {shippingInfo && shippingInfo.userInfo
                 ? shippingInfo.userInfo.fullName
                 : ""}
             </h3>
             <p>
-              <LocalPhoneIcon sx={{ mr: "1em" }} fontSize="large" />
+              <LocalPhoneIcon sx={{ mr: "1em" }} fontSize="medium" />
               {shippingInfo && shippingInfo.userInfo
                 ? shippingInfo.userInfo.phone
                 : ""}{" "}
             </p>
             <p>
-              <PlaceIcon sx={{ mr: "1em" }} fontSize="large" />
+              <PlaceIcon sx={{ mr: "1em" }} fontSize="medium" />
               {shippingInfo && shippingInfo.userInfo
                 ? shippingInfo.userInfo.address
                 : ""}
@@ -44,13 +44,13 @@ function PaymentInfo({ setValue }) {
         <div className="contact">
           <div className="contact_content">
             <h3>
-              <LocalAtmIcon sx={{ mr: "1em" }} fontSize="large" />
+              <LocalAtmIcon sx={{ mr: "1em" }} fontSize="medium" />
               {shippingInfo && shippingInfo.userInfo
                 ? shippingInfo.userInfo.paymentMethods
                 : ""}{" "}
             </h3>
             <p>
-              <EventNoteIcon sx={{ mr: "1em" }} fontSize="large" />{" "}
+              <EventNoteIcon sx={{ mr: "1em" }} fontSize="medium" />{" "}
               {shippingInfo && shippingInfo.userInfo
                 ? shippingInfo.userInfo.note
                 : ""}

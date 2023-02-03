@@ -255,8 +255,8 @@
 
 .checkout_item .cart_img {
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 4em;
+  height: 4em;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -554,9 +554,8 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* padding-right: 10em; */
 
-  /* background: #000; */
+  font-size: 16px;
 }
 
 .delivery_content label {
@@ -613,8 +612,8 @@
 .delivery_content .checkmark {
   position: absolute;
   margin-left: 1em;
-  height: 20px;
-  width: 20px;
+  height: 1.5em;
+  width: 1.5em;
   background-color: #ccc;
   cursor: pointer;
   border-radius: 50%;

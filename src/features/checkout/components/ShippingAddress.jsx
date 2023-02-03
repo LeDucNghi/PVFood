@@ -12,7 +12,7 @@ export default function ShippingAddress({ values, onChange, onBlur }) {
         type="text"
         sx={{ width: !account ? "32%" : "49%" }}
         id="outlined-basic"
-        label="Tên người nhận *"
+        label="Recipient's name *"
         variant="outlined"
         name="fullName"
         onBlur={onBlur}
@@ -23,7 +23,7 @@ export default function ShippingAddress({ values, onChange, onBlur }) {
         type="text"
         sx={{ width: !account ? "32%" : "49%" }}
         id="outlined-basic"
-        label="Số điện thoại *"
+        label="Phone number *"
         variant="outlined"
         name="phone"
         onBlur={onBlur}
@@ -47,7 +47,7 @@ export default function ShippingAddress({ values, onChange, onBlur }) {
         type="text"
         sx={{ width: "100%" }}
         id="outlined-basic"
-        label="Địa chỉ *"
+        label="Address *"
         variant="outlined"
         name="address"
         onBlur={onBlur}
