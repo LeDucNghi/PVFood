@@ -4,10 +4,10 @@ import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import { selectAccountDetail } from "features/users/account/accountSlice";
+import { selectAccountDetail } from "features/account/accountSlice";
 import { useSelector } from "react-redux";
 
-export default function Filter({ orderList, setOrderList, setIsLoading }) {
+export default function Filter({ orderList, setOrderList }) {
   const accountDetail = useSelector(selectAccountDetail);
 
   const [filterName, setFilterName] = useState("All");
@@ -20,23 +20,23 @@ export default function Filter({ orderList, setOrderList, setIsLoading }) {
     let timer;
 
     if (filterName.includes("All")) {
-      setIsLoading(true);
+      // setIsLoading(true);
 
       clearTimeout(timer);
 
       timer = setTimeout(() => {
-        setIsLoading(false);
+        // setIsLoading(false);
         setOrderList(accountDetail.orders);
       }, 500);
     } else {
-      setIsLoading(true);
+      // setIsLoading(true);
 
       const newList = orderList.filter((el) => el.status.includes(filterName));
 
       clearTimeout(timer);
 
       timer = setTimeout(() => {
-        setIsLoading(false);
+        // setIsLoading(false);
         setOrderList(newList);
       }, 500);
     }

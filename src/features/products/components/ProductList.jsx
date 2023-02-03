@@ -1,21 +1,14 @@
 import "./styles/Product.css";
 
-import {
-  addProduct,
-  selectListCart,
-  updateQty,
-} from "features/users/cart/cartSlice";
-import {
-  selectFilterList,
-  selectIsLoading,
-} from "features/users/products/productSlice";
+import { addProduct, selectListCart, updateQty } from "features/cart/cartSlice";
+import { selectFilterList, selectIsLoading } from "../productSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-import Filter from "features/users/products/components/Filter";
+import Filter from "./Filter";
 import { Images } from "constants/images";
-import Indicator from "components/Common/Pagination/Pagination";
 import List from "./List";
 import Loading from "components/Common/Loading/Loading";
+import Pagination from "components/Common/Pagination/Pagination";
 import Swal from "sweetalert2";
 import { handleFetchByFilter } from "../productThunk";
 import { useState } from "react";
@@ -52,7 +45,11 @@ function ProductList() {
 
   return (
     <div className="product_container">
-      <Filter filterName={filterName} setFilterName={setFilterName} />
+      <Filter
+        filterName={filterName}
+        setFilterName={setFilterName}
+        // setIsLoading={setIsLoading}
+      />
       {isLoading === true ? (
         <div className="waiting">
           <Loading />
@@ -64,7 +61,7 @@ function ProductList() {
           <img src={Images.EMPTY_CART} alt="" />
         </div>
       )}
-      <Indicator triggerFunc={handleFetchByFilter(filterName)} />
+      <Pagination triggerFunc={handleFetchByFilter(filterName)} />
     </div>
   );
 }

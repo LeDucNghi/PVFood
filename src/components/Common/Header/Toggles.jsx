@@ -55,12 +55,7 @@ export default function Toggles({ data, setOpenDrawer }) {
             return (
               <Tooltip key={key} arrow title={items.title}>
                 <IconButton>
-                  <WavyLink
-                    duration={1000}
-                    color="#f08080"
-                    to={items.route}
-                    // className="col_text"
-                  >
+                  <WavyLink duration={1000} color="#f08080" to={items.route}>
                     {items.icon}
                   </WavyLink>
                 </IconButton>

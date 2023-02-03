@@ -3,9 +3,7 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { Typography } from "@mui/material";
-import { selectListCart } from "features/users/cart/cartSlice";
 import { styled } from "@mui/material/styles";
-import { useSelector } from "react-redux";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -25,8 +23,6 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function ItemsList({ orderDetail }) {
-  const listCart = useSelector(selectListCart);
-
   const orderList =
     orderDetail && orderDetail.info ? orderDetail.info.shoppingInfo.items : [];
 

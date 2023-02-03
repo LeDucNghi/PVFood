@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 
 import { Box } from "@mui/material";
 import Grow from "@mui/material/Grow";
-import OrderDetail from "../../features/users/tracking/components/OrderDetail";
-import OrderSearchList from "../../features/users/tracking/components/OrderSearchList";
-import SearchOrders from "../../features/users/tracking/components/SearchOrders";
-import { fetchOrderOptions } from "../../features/users/tracking/trackingThunk";
+import OrderDetail from "features/tracking/components/OrderDetail";
+import OrderSearchList from "features/tracking/components/OrderSearchList";
+import SearchOrders from "features/tracking/components/SearchOrders";
+import { fetchOrderOptions } from "features/tracking/trackingThunk";
 import { useDispatch } from "react-redux";
 
 export default function Tracking() {

@@ -1,14 +1,18 @@
 import "./styles/Filter.css";
 
-import { resetParams, setNewFilterName } from "../productSlice";
 import { useEffect, useState } from "react";
 
+import DoneIcon from "@mui/icons-material/Done";
+import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import { handleFetchByFilter } from "../productThunk";
 import { productFilter } from "__mock__";
+import { resetParams } from "../productSlice";
 import { useDispatch } from "react-redux";
 
 function Filter({ filterName, setFilterName }) {
   const dispatch = useDispatch();
+
+  const [checked, setChecked] = useState(0);
 
   useEffect(() => {
     dispatch(resetParams());
@@ -16,30 +20,43 @@ function Filter({ filterName, setFilterName }) {
     dispatch(handleFetchByFilter(filterName));
   }, [dispatch, filterName]);
 
-  const handleChangeFilterName = (name) => {
+  useEffect(() => {
+    productFilter.forEach((items) => {
+      const { filterName } = items;
+
+      if (filterName === "best seller") setChecked(1);
+    });
+  }, []);
+
+  const handleChangeFilterName = (name, id) => {
     filterName = name;
     setFilterName(filterName);
+    setChecked(id);
   };
 
   return (
-    <div className="section">
-      <h2>Filter</h2>
+    <div className="filter_section">
+      <h2>
+        Filter <FilterAltIcon />{" "}
+      </h2>
       {productFilter.map((item, key) => {
         return (
-          <div key={key} className="filter_btn">
-            <label>
-              {item.name}
-              <input
-                type="radio"
-                name="radio"
-                defaultChecked={
-                  item.filterName === "best seller" ? true : false
+          <label
+            key={key}
+            className="filter_btn"
+            onClick={() => handleChangeFilterName(item.filterName, item.id)}
+          >
+            <span className="checkmark">
+              <DoneIcon
+                fontSize="small"
+                className={
+                  checked && checked === item.id ? "check checked" : "check"
                 }
-                onChange={() => handleChangeFilterName(item.filterName)}
               />
-              <span className="checkmark"></span>
-            </label>
-          </div>
+            </span>
+
+            <p className="filter_name">{item.name}</p>
+          </label>
         );
       })}
     </div>

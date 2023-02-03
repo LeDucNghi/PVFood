@@ -4,7 +4,7 @@ import {
   selectParams,
   selectProductList,
   setParams,
-} from "features/users/products/productSlice";
+} from "features/products/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 

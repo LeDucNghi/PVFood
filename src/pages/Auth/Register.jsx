@@ -1,5 +1,5 @@
 import AuthPage from "./AuthPage";
-import RegisterForm from "features/users/auth/components/RegisterForm";
+import RegisterForm from "features/auth/components/RegisterForm";
 
 export default function Register() {
   return (

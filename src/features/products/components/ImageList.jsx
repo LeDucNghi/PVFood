@@ -1,8 +1,6 @@
-import React, { useState } from "react";
-
-import Slide from "react-reveal/Slide";
 import { selectProductDetail } from "../productSlice";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 export function ImageList() {
   const productDetail = useSelector(selectProductDetail);

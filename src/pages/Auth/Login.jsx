@@ -1,8 +1,10 @@
 import AuthPage from "./AuthPage";
-import LoginForm from "features/users/auth/components/LoginForm";
+import LoginForm from "features/auth/components/LoginForm";
+import { withErrorBoundary } from "react-error-boundary";
 
-export default function Login() {
+function Login() {
   return (
+    // <>Login</>
     <AuthPage
       title="Login"
       smUpContent="Don’t have an account?"
@@ -16,3 +18,12 @@ export default function Login() {
     </AuthPage>
   );
 }
+
+const Error = ({ error }) => {
+  console.log("🚀 ~ file: Login.jsx:23 ~ Error ~ error", error);
+  return <div>{error.message}</div>;
+};
+
+export default withErrorBoundary(Login, {
+  FallbackComponent: Error,
+});

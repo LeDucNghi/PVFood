@@ -1,7 +1,7 @@
 import { Button, Divider, Stack, Typography } from "@mui/material";
 
 import CustomModal from "components/Common/Modal/Modal";
-import Iconify from "components/Layouts/Dashboard/Iconify";
+import Iconify from "components/Common/Header/Iconify";
 import { Images } from "constants/images";
 import { useState } from "react";
 

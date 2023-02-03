@@ -9,7 +9,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import Iconify from "components/Layouts/Dashboard/Iconify";
+import Iconify from "components/Common/Header/Iconify";
 import { Link } from "react-router-dom";
 import { LoadingButton } from "@mui/lab";
 import { WavyLink } from "react-wavy-transitions";

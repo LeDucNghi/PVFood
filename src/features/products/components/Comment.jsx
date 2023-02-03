@@ -2,13 +2,12 @@ import { Field, Form, Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Button } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Images } from "constants/images";
+import InfoIcon from "@mui/icons-material/Info";
 import Rate from "./Rate";
 import { commentInitialValues } from "formik/user";
-import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { handlePostComment } from "../productThunk";
-import { selectAccountDetail } from "features/users/account/accountSlice";
+import { selectAccountDetail } from "features/account/accountSlice";
 import styles from "./styles/Comment.module.css";
 
 export default function Comment({ id }) {
@@ -65,12 +64,7 @@ export default function Comment({ id }) {
               </div>
               <span className={styles.warn}>
                 Your review will be on public.
-                <FontAwesomeIcon
-                  className={styles.icon}
-                  size="1x"
-                  icon={faInfoCircle}
-                  style={{ color: "#000" }}
-                />
+                <InfoIcon />
               </span>
               <div className={styles.submit}>
                 {/* <button type="button" className={styles.cancel}>

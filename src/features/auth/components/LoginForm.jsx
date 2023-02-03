@@ -1,5 +1,5 @@
+import { Form, Formik } from "formik";
 import {
-  Checkbox,
   IconButton,
   InputAdornment,
   Link,
@@ -7,10 +7,9 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { Form, Formik } from "formik";
 import { LoginSchema, defaultValues } from "formik/user";
 
-import Iconify from "components/Layouts/Dashboard/Iconify";
+import Iconify from "components/Common/Header/Iconify";
 import { LoadingButton } from "@mui/lab";
 import { Link as RouterLink } from "react-router-dom";
 import { WavyLink } from "react-wavy-transitions";

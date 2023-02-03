@@ -1,7 +1,6 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 
 import { Images } from "constants/images";
-import Page from "components/Layouts/Dashboard/Page";
 import PropTypes from "prop-types";
 import { Link as RouterLink } from "react-router-dom";
 import { styled } from "@mui/material/styles";
@@ -37,31 +36,29 @@ const ContentStyle = styled("div")(({ theme }) => ({
 
 export default function Page404({ title, content, route, buttonContent }) {
   return (
-    <Page title="404 Page Not Found">
-      <Container>
-        <ContentStyle sx={{ textAlign: "center", alignItems: "center" }}>
-          <Typography variant="h3" paragraph>
-            {title}
-          </Typography>
+    <Container>
+      <ContentStyle sx={{ textAlign: "center", alignItems: "center" }}>
+        <Typography variant="h3" paragraph>
+          {title}
+        </Typography>
 
-          <Typography sx={{ color: "text.secondary" }}>{content}</Typography>
+        <Typography sx={{ color: "text.secondary" }}>{content}</Typography>
 
-          <Box
-            component="img"
-            src={Images.error404}
-            sx={{ height: 260, mx: "auto", my: { xs: 5, sm: 10 } }}
-          />
+        <Box
+          component="img"
+          src={Images.error404}
+          sx={{ height: 260, mx: "auto", my: { xs: 5, sm: 10 } }}
+        />
 
-          <Button
-            to={route}
-            size="large"
-            variant="contained"
-            component={RouterLink}
-          >
-            {buttonContent}
-          </Button>
-        </ContentStyle>
-      </Container>
-    </Page>
+        <Button
+          to={route}
+          size="large"
+          variant="contained"
+          component={RouterLink}
+        >
+          {buttonContent}
+        </Button>
+      </ContentStyle>
+    </Container>
   );
 }

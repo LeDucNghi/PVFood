@@ -53,7 +53,7 @@ function Header() {
     Header.classList.toggle("sticky", window.scrollY > 0);
   });
 
-  if (pathname === `/login` || pathname === `/register`) return <></>;
+  if (pathname === `/login`) return <></>;
   if (pathname === `/admin`) return <></>;
   if (pathname === `/success`) return <></>;
   if (pathname === `/dashboard/app`) return <></>;

@@ -1,9 +1,8 @@
 import { Card, Container, Typography } from "@mui/material";
 
-import AuthSocial from "../../features/users/auth/components/AuthSocial";
+import AuthSocial from "features/auth/components/AuthSocial";
 import { Images } from "constants/images";
-import Logo from "components/Layouts/Dashboard/Logo";
-import Page from "components/Layouts/Dashboard/Page";
+import Logo from "components/Common/Header/Logo";
 import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
 import useResponsive from "hooks/useResponsive";
@@ -50,90 +49,63 @@ const ContentStyle = styled("div")(({ theme }) => ({
 }));
 
 export default function AuthPage({
-  title,
-  smUpContent,
-  smUpRoute,
-  smUpRouteText,
   mdUpContent,
   contentTitle,
   contentSub,
   children,
 }) {
-  const smUp = useResponsive("up", "sm");
-
   const mdUp = useResponsive("up", "md");
   return (
-    <Page title={title}>
-      <RootStyle>
-        <HeaderStyle>
-          <Logo />
-          {/* {smUp && (
-            <Typography variant="body2" sx={{ mt: { md: -2 } }}>
-              {smUpContent}
-              <WavyLink duration={1000} color="#f08080" to={smUpRoute}>
-                <Link variant="subtitle2" component={RouterLink}>
-                  {smUpRouteText}
-                </Link>
-              </WavyLink>
-            </Typography>
-          )} */}
-        </HeaderStyle>
+    <RootStyle>
+      <HeaderStyle>
+        <Logo />
+      </HeaderStyle>
 
-        {mdUp && (
-          <SectionStyle>
-            <Typography
-              variant="h4"
-              sx={{
-                px: 5,
-                mt: 10,
-                mb: 5,
-                textAlign: "center",
-                fontFamily: "Krona One",
-              }}
-            >
-              {mdUpContent}
-            </Typography>
-            <img alt="register" src={Images.bossLogo} />
-          </SectionStyle>
-        )}
+      {mdUp && (
+        <SectionStyle>
+          <Typography
+            variant="h4"
+            sx={{
+              px: 5,
+              mt: 10,
+              mb: 5,
+              textAlign: "center",
+              fontFamily: "Krona One",
+            }}
+          >
+            {mdUpContent}
+          </Typography>
+          <img alt="register" src={Images.bossLogo} />
+        </SectionStyle>
+      )}
 
-        <Container>
-          <ContentStyle>
-            <Typography
-              sx={{ fontFamily: "Krona One" }}
-              variant="h4"
-              gutterBottom
-            >
-              {contentTitle}
-            </Typography>
+      <Container>
+        <ContentStyle>
+          <Typography
+            sx={{ fontFamily: "Krona One" }}
+            variant="h4"
+            gutterBottom
+          >
+            {contentTitle}
+          </Typography>
 
-            <Typography
-              sx={{
-                color: "#000",
-                mb: 5,
-                // fontFamily: "Montserrat",
-                fontWeight: "700",
-              }}
-            >
-              {contentSub}
-            </Typography>
+          <Typography
+            sx={{
+              color: "#000",
+              mb: 5,
+              // fontFamily: "Montserrat",
+              fontWeight: "700",
+            }}
+          >
+            {contentSub}
+          </Typography>
 
-            <AuthSocial />
+          <AuthSocial />
 
-            {children}
-
-            {/* {!smUp && (
-              <Typography variant="body2" sx={{ mt: 3, textAlign: "center" }}>
-                Already have an account?{" "}
-                <Link variant="subtitle2" to="/login" component={RouterLink}>
-                  Login
-                </Link>
-              </Typography>
-            )} */}
-          </ContentStyle>
-        </Container>
-      </RootStyle>
-    </Page>
+          {children}
+        </ContentStyle>
+      </Container>
+    </RootStyle>
   );
 }
 

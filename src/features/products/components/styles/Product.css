@@ -14,21 +14,28 @@
 
 .product_list {
   position: relative;
-  top: 2rem;
-  left: 50%;
-  transform: translateX(-65%);
+
+  /* background-color: red; */
+
+  width: 70%;
+
+  top: 2em;
+  left: 20%;
+  transform: translateX(-20%);
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 1em;
+
+  font-size: 15px;
 }
 
 .product_list .product_item {
   list-style-type: none;
 
   position: relative;
-  width: 25rem;
-  height: 40rem;
+  width: 18em;
+  height: 30em;
 
   display: flex;
   justify-content: center;
@@ -103,11 +110,11 @@
 }
 
 .product_list .product_item .content .img {
-  width: 10rem;
-  height: 10rem;
+  width: 6em;
+  height: 6em;
   border-radius: 12px;
   object-fit: cover;
-  margin-bottom: 5rem;
+  margin-bottom: 1em;
 }
 
 .content-name {

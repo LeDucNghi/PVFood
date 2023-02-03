@@ -1,8 +1,4 @@
-import {
-  addProduct,
-  selectListCart,
-  updateQty,
-} from "features/users/cart/cartSlice";
+import { addProduct, selectListCart, updateQty } from "features/cart/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 
 import { Button } from "@mui/material";
