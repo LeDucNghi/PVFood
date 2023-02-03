@@ -1,19 +1,19 @@
 import "./Checkout.css";
 
-import { AddressForm } from "features/users/checkout/components/AddressForm";
+import { AddressForm } from "features/checkout/components/AddressForm";
 import Box from "@mui/material/Box";
 import Empty from "components/Common/Empty/Empty";
 import { Images } from "constants/images";
 import LooksOneRoundedIcon from "@mui/icons-material/LooksOneRounded";
 import LooksTwoRoundedIcon from "@mui/icons-material/LooksTwoRounded";
-import ReviewOrder from "features/users/checkout/pages/ReviewOrder/ReviewOrder";
+import ReviewOrder from "features/checkout/pages/ReviewOrder/ReviewOrder";
 import ScrollToTop from "components/Common/ScrollToTop/ScrollToTop";
-import ShoppingBags from "features/users/checkout/components/ShoppingBags";
+import ShoppingBags from "features/checkout/components/ShoppingBags";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import { selectListCart } from "features/users/cart/cartSlice";
+import { selectListCart } from "features/cart/cartSlice";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 

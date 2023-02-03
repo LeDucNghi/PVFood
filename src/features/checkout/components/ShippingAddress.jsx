@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import { selectAccountDetail } from "features/users/account/accountSlice";
+import { selectAccountDetail } from "features/account/accountSlice";
 import { useSelector } from "react-redux";
 
 export default function ShippingAddress({ values, onChange, onBlur }) {

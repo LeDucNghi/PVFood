@@ -10,6 +10,8 @@
   transition: all 0.5s ease-in-out;
 
   box-shadow: 7px 7px 20px #a1a1a1, -7px -7px 20px #ffffff;
+
+  font-size: 15px;
 }
 
 .checkout_container .css-1aquho2-MuiTabs-indicator {
@@ -54,15 +56,13 @@
 
 .checkout_content_right {
   width: 30%;
+  /* background: red; */
+  padding: 2em 1em;
 }
 
 .checkout_container .checkout_content .checkout_address {
-  /* width: 1040px; */
   position: relative;
   width: 100%;
-  /* display: grid; */
-  /* height: 750px; */
-  /* background: violet; */
 }
 
 .close_address {
@@ -77,19 +77,16 @@
 
 .checkout_container .checkout_content .checkout_bag {
   position: relative;
-  /* top: 3em; */
-  /* width: 600px; */
   width: 100%;
-  /* background: #000; */
 }
 
 .checkout_container .checkout_content .checkout_bag .checkout_item {
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 220px;
-  /* padding-right: 4em; */
+  max-height: 15em;
   overflow: auto;
-  /* background: #000; */
+
+  /* background: pink; */
 }
 
 .checkout_bag .checkout_help {
@@ -210,12 +207,17 @@
 
 .checkout_item li {
   position: relative;
+
   width: 100%;
+
   list-style: none;
+
   /* padding: 1.5em 0em; */
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   background: #fff;
   margin: 1em 0;
 }
@@ -223,11 +225,26 @@
 .checkout_item li p {
   position: absolute;
   font-size: 1em;
-  padding: 0.8em 0em;
+  padding: 0em 0.5em;
   font-weight: 600;
   color: #777777;
   white-space: nowrap;
   font-family: "Montserrat", sans-serif;
+}
+
+.checkout_item li .cart_name {
+  width: 50%;
+  padding: 0 0.5em;
+  font-size: 0.9em;
+  font-weight: 600;
+  line-height: 30px;
+  /* font-family: "Ariata Display"; */
+
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .checkout_item li .cart_info {
@@ -279,19 +296,21 @@
   position: relative;
   width: 100%;
   height: 160px;
-  padding: 2.5em 2em;
+  padding: 2.5em 1em;
   /* background: #000; */
-  margin-top: 23em;
+  margin-top: 1em;
   border-top: 2px solid rgb(245, 245, 245);
 }
 
 .checkout_code {
   position: relative;
-  padding-right: 1.5em;
+
+  /* padding-right: 1.5em; */
+  padding: 1em;
+
   width: 100%;
-  height: 150px;
+
   border-top: 2px solid rgb(245, 245, 245);
-  /* background: #000; */
 }
 
 .checkout_code .code_input {
@@ -352,7 +371,7 @@
   position: relative;
   width: 100%;
   height: 100px;
-  padding: 0em 2em;
+  padding: 0em 1em;
 
   /* background: #000; */
   border-top: 2px solid rgb(245, 245, 245);
@@ -458,7 +477,12 @@
   width: 100%;
   /* background: red; */
   margin: 2em 0;
+
   border-top: 2px solid rgb(245, 245, 245);
+}
+
+.checkout_delivery h2 {
+  padding: 0.5em 0;
 }
 
 .checkout_delivery p {
@@ -468,6 +492,7 @@
   color: #777777;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
+  padding: 0.5em 0;
 }
 
 .checkout_delivery .checkout_btn {
@@ -617,5 +642,5 @@
 .checkout_note {
   position: relative;
   margin-top: 2em;
-  padding-right: 1.5em;
+  padding: 0 1em;
 }

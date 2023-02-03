@@ -1,6 +1,4 @@
-import React from "react";
-import { WavyLink } from "react-wavy-transitions";
-import { selectListCart } from "features/users/cart/cartSlice";
+import { selectListCart } from "features/cart/cartSlice";
 import { useSelector } from "react-redux";
 
 export default function BagsList() {

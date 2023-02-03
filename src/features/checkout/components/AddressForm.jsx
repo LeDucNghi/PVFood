@@ -11,11 +11,9 @@ import DeliveryMethods from "./Delivery";
 import { PaymentMethod } from "./PaymentMethods";
 import ShippingAddress from "./ShippingAddress";
 import { handleCheckInfo } from "../checkoutThunk";
-import { selectAccountDetail } from "features/users/account/accountSlice";
-import { useNavigate } from "react-router-dom";
+import { selectAccountDetail } from "features/account/accountSlice";
 
 export function AddressForm({ setValue }) {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const accountDetail = useSelector(selectAccountDetail);

@@ -64,7 +64,6 @@ export const handleFetchByFilter =
       const res = await axios.get(
         `${rootApi.food}?category=${filterName}&${paramString}`
       );
-      console.log("🚀 ~ file: productThunk.js:106 ~ res", res);
 
       await dispatch(fetchProductByFilter(res.data));
     } catch (error) {

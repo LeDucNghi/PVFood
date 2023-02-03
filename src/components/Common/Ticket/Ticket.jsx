@@ -1,4 +1,4 @@
-import "./Ticket.scss";
+import "./Ticket.css";
 
 import { Images } from "constants/images";
 import PropTypes from "prop-types";

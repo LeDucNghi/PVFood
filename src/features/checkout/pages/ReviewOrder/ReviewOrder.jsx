@@ -4,13 +4,13 @@ import { Button, CircularProgress } from "@mui/material";
 import {
   selectIsLoading,
   selectIsSuccess,
-} from "features/users/checkout/checkoutSlice";
+} from "features/checkout/checkoutSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-import PaymentInfo from "features/users/checkout/components/PaymentInfo";
+import PaymentInfo from "features/checkout/components/PaymentInfo";
 import ScrollToTop from "components/Common/ScrollToTop/ScrollToTop";
-import { handleCheckout } from "features/users/checkout/checkoutThunk";
-import { selectAccountDetail } from "features/users/account/accountSlice";
+import { handleCheckout } from "features/checkout/checkoutThunk";
+import { selectAccountDetail } from "features/account/accountSlice";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 

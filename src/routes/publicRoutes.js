@@ -11,7 +11,7 @@ import Tracking from "pages/Tracking/Tracking";
 
 const Home = lazy(() => import("pages/Home/HomePage"));
 const FoodPage = lazy(() => import("pages/ProductsList/Products"));
-// const Checkout = lazy(() => import("pages/Checkout/CheckoutPage"));
+const Checkout = lazy(() => import("pages/Checkout/CheckoutPage"));
 // const Account = lazy(() => import("components/Layouts/Account/Account"));
 // const Dashboard = lazy(() => import("features/admin/pages/Dashboard"));
 
@@ -128,14 +128,14 @@ export default function PublicRoutes({ isAdmin }) {
     //   ),
     // },
 
-    // {
-    //   path: "checkout",
-    //   element: (
-    //     <Suspense fallback={<Loading />}>
-    //       <Checkout />
-    //     </Suspense>
-    //   ),
-    // },
+    {
+      path: "checkout",
+      element: (
+        <Suspense fallback={<Loading />}>
+          <Checkout />
+        </Suspense>
+      ),
+    },
 
     // {
     //   path: "bill",
