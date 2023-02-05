@@ -7,7 +7,7 @@ import { Images } from "constants/images";
 import Info from "./Info";
 import ItemsList from "./ItemsList";
 import Loading from "components/Common/Loading/Loading";
-import Timelines from "features/users/tracking/components/Timeline";
+import Timelines from "features/tracking/components/Timeline";
 import TotalBill from "./TotalBill";
 import { handleConfirmReceived } from "../../accountThunk";
 import moment from "moment";
@@ -36,10 +36,11 @@ export default function OrderDetail({
     return (
       <Empty
         width="100%"
+        height="30%"
         showButton={false}
         title="Please choose any orders to see the detail"
         image={Images.emptyCart}
-        margin="15em 0"
+        // margin="15em 0"
       />
     );
 
@@ -78,7 +79,7 @@ export default function OrderDetail({
             display: "flex",
             flexDirection: "column",
             fontWeight: 600,
-            fontSize: "1.2em",
+            fontSize: "1em",
           }}
         >
           Note : <span>{orderDetail.info.userInfo.note} </span>
@@ -86,7 +87,7 @@ export default function OrderDetail({
 
         <Box
           sx={{
-            width: "30%",
+            width: "40%",
 
             display: "flex",
             justifyContent: "space-between",

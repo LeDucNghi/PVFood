@@ -15,7 +15,6 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Info({ orderStatus, status, orderDetail }) {
   const checkOrderDetail = orderDetail && orderDetail.info;
-  const checkCancelStatus = status && status === "Cancelled";
 
   return (
     <Box sx={{ flexGrow: 1 }}>

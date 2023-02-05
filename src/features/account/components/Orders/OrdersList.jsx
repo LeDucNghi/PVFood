@@ -157,7 +157,10 @@ const Items = ({
         <h6>
           {items.info.userInfo.fullName}
           <span>
-            {handleStatusIcon(orderStatus ? orderStatus.status : items.status)}{" "}
+            {handleStatusIcon(
+              orderStatus ? orderStatus.status : items.status,
+              "small"
+            )}{" "}
             {orderStatus ? orderStatus.status : items.status}
           </span>
         </h6>
@@ -179,7 +182,7 @@ const Items = ({
         <div className="order_items_btn">
           <Button
             color="error"
-            startIcon={<DeleteIcon />}
+            startIcon={<DeleteIcon fontSize="small" />}
             variant="text"
             onClick={() => handleDeleteItem(items.id)}
             // onClick={() => dispatch(deleteOrders(items.orderId))}
@@ -192,7 +195,7 @@ const Items = ({
           </Button>
           <Button
             color="success"
-            startIcon={<ModeEditIcon />}
+            startIcon={<ModeEditIcon fontSize="small" />}
             variant="text"
             onClick={() => handleFetchingProducts(items)}
           >

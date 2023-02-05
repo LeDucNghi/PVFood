@@ -1,10 +1,10 @@
 .profile_container {
   position: relative;
-  top: 30%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, -10%);
   width: 90%;
-  height: 80%;
+  height: 90%;
   /* background: violet; */
 
   display: flex;
@@ -15,6 +15,7 @@
   border-radius: 16px;
 
   box-shadow: 10px 10px 15px #c4c4c4, -10px -10px 15px #ffffff;
+  font-size: 15px;
 }
 
 .profile_left_side {
@@ -71,13 +72,6 @@
 
 .profile_left_side .onHover.show {
   position: absolute;
-  /* width: 100%; */
-  /* height: 100%; */
-
-  /* border-radius: 50%; */
-
-  /* z-index: 1; */
-  /* transition: all 0.5s ease-in-out; */
 
   display: flex;
   justify-content: center;
@@ -88,4 +82,53 @@
   opacity: 1;
 
   /* background: rgba(95, 100, 106, 0.5); */
+}
+
+/* box right side */
+.profile_container .css-0 {
+  flex-grow: 1;
+  width: 40%;
+  display: flex;
+  padding: 0em 1.6em;
+}
+
+/* box left side */
+.profile_container .avt {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile_container .avt .img_cover {
+  width: 15em;
+  height: 15em;
+
+  border: 1px dashed #919eab;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_container .avt .img_cover .icon_button {
+  border: 0.5px solid #ccc;
+  width: 8em;
+  height: 8em;
+  overflow: hidden;
+}
+
+.profile_container .avt .img_cover .icon_button img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.profile_container .avt .img_cover .icon_button .css-y9smp5-MuiTypography-root {
+  margin-top: 1em;
+  font-size: 1em;
 }

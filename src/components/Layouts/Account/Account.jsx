@@ -20,7 +20,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Toolbar from "@mui/material/Toolbar";
-import { selectAccountDetail } from "features/users/account/accountSlice";
+import { selectAccountDetail } from "features/account/accountSlice";
 import { useSelector } from "react-redux";
 
 const drawerWidth = 250;

@@ -16,41 +16,13 @@ export default function UploadAvt({ values, setFieldValue }) {
       setImg(img);
 
       setFieldValue("avatarUrl", e.target.files[0]);
-
-      // const reader = new FileReader();
-      // reader.readAsDataURL(e.target.files[0]);
-      // reader.onload = () => {
-      //   //   image = reader.result;
-      //   //   setImage(image);
-      //   //   setFieldValue("image", image);
-      //   dispatch(setImage(reader.result));
-      // };
     }
   };
 
   return (
-    // <div className="profile_left_side">
-    <Box
-      sx={{
-        width: "40%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-      }}
-    >
+    <Box className="avt">
       <Stack
-        sx={{
-          width: "200px",
-          height: "200px",
-          //   bgcolor: "pink",
-          border: "1px dashed #919eab",
-          borderRadius: "50%",
-
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+        className="img_cover"
         direction="row"
         alignItems="center"
         spacing={2}
@@ -59,13 +31,7 @@ export default function UploadAvt({ values, setFieldValue }) {
           color="primary"
           aria-label="upload picture"
           component="label"
-          sx={{
-            // bgcolor: "red",
-            border: "0.5px solid #ccc",
-            width: "150px",
-            height: "150px",
-            overflow: "hidden",
-          }}
+          className="icon_button"
           onMouseOver={() => setOnHover(true)}
           onMouseLeave={() => setOnHover(false)}
         >
@@ -84,12 +50,6 @@ export default function UploadAvt({ values, setFieldValue }) {
               img ? img : values.avatarUrl ? values.avatarUrl : Images.avatar1
             }
             alt=""
-            style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-            }}
           />
 
           <div className={onHover ? "onHover show" : "onHover"}>
@@ -118,6 +78,5 @@ export default function UploadAvt({ values, setFieldValue }) {
         Allowed *.jpeg, *.jpg, *.png, *.gif max size of 3.1 MB
       </Typography>
     </Box>
-    // </div>
   );
 }

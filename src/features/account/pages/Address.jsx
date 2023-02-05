@@ -3,8 +3,6 @@ import "./styles/Address.css";
 import AddEditAddress from "../components/Address/AddEditAddress";
 import AddressList from "../components/Address/AddressList";
 import CustomModal from "components/Common/Modal/Modal";
-import Loading from "components/Common/Loading/Loading";
-import { useEffect } from "react";
 import { useState } from "react";
 
 export default function Address() {

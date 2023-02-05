@@ -5,14 +5,10 @@ import { TextField, Typography } from "@mui/material";
 
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import { useDispatch } from "react-redux";
 
 // import { handleUpdateAddress } from "../../accountThunk";
 
-
 export default function AddEditAddress({ isEdit }) {
-  const dispatch = useDispatch();
-
   const addressField = [
     {
       id: 1,
@@ -51,14 +47,7 @@ export default function AddEditAddress({ isEdit }) {
       // onSubmit={(values) => dispatch(handleUpdateAddress())}
     >
       {(formikProps) => {
-        const {
-          handleChange,
-          handleBlur,
-          values,
-          touched,
-          errors,
-          setFieldValue,
-        } = formikProps;
+        const { values } = formikProps;
         return (
           <Form>
             <Box sx={{ flexGrow: 1 }}>

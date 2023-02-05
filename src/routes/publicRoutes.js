@@ -1,20 +1,23 @@
 import { Navigate, useRoutes } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
+import Address from "features/account/pages/Address";
 import Loading from "components/Common/Loading/Loading";
 import Login from "pages/Auth/Login";
 import OrderSuccess from "pages/OrderSuccess/OrderSuccess";
 import Page404 from "components/Common/NotFound/Page404";
+import Password from "features/account/pages/Password";
 import ProdDetail from "pages/ProductsDetail/ProdDetail";
 import ProductList from "features/products/components/ProductList";
+import Profile from "features/account/pages/Profile";
 import Register from "pages/Auth/Register";
 import Tracking from "pages/Tracking/Tracking";
+import YourOrders from "features/account/pages/Orders";
 
 const Home = lazy(() => import("pages/Home/HomePage"));
 const FoodPage = lazy(() => import("pages/ProductsList/Products"));
 const Checkout = lazy(() => import("pages/Checkout/CheckoutPage"));
-// const Account = lazy(() => import("components/Layouts/Account/Account"));
-// const Dashboard = lazy(() => import("features/admin/pages/Dashboard"));
+const Account = lazy(() => import("components/Layouts/Account/Account"));
 
 export default function PublicRoutes({ isAdmin }) {
   return useRoutes([
@@ -55,70 +58,37 @@ export default function PublicRoutes({ isAdmin }) {
       ],
     },
 
-    // {
-    //   path: "user",
-    //   element: (
-    //     <Suspense fallback={<Loading height="100vh" />}>
-    //       <Account />
-    //     </Suspense>
-    //   ),
-    //   children: [
-    //     {
-    //       path: "",
-    //       element: <Navigate to="profile" />,
-    //     },
-    //     {
-    //       path: "profile",
-    //       element: <Profile />,
-    //     },
-    //     {
-    //       path: "orders",
-    //       element: <YourOrders />,
-    //     },
+    {
+      path: "user",
+      element: (
+        <Suspense fallback={<Loading height="100vh" />}>
+          <Account />
+        </Suspense>
+      ),
+      children: [
+        {
+          path: "",
+          element: <Navigate to="profile" />,
+        },
+        {
+          path: "profile",
+          element: <Profile />,
+        },
+        {
+          path: "orders",
+          element: <YourOrders />,
+        },
 
-    //     {
-    //       path: "address",
-    //       element: <Address />,
-    //     },
-    //     {
-    //       path: "password",
-    //       element: <Password />,
-    //     },
-    //   ],
-    // },
-
-    // // {
-    // //   path: "dashboard",
-    // //   element: isAdmin ? (
-    // //     <Suspense fallback={<Loading height="100%" />}>
-    // //       <Dashboard />
-    // //     </Suspense>
-    // //   ) : (
-    // //     <Navigate to="/home" replace />
-    // //   ),
-    // //   children: [
-    // //     {
-    // //       path: "",
-    // //       element: <Navigate to="app" />,
-    // //     },
-    // //     {
-    // //       path: "app",
-    // //       element: <DashboardApp />,
-    // //     },
-    // //     {
-    // //       path: "user",
-    // //       element: <User />,
-    // //     },
-    // //     {
-    // //       path: "products",
-    // //       element: <Products />,
-    // //     },
-    // //     {
-    // //       path: "orders",
-    // //       element: <Orders />,
-    // //     },
-    // //   ],
-    // // },
+        {
+          path: "address",
+          element: <Address />,
+        },
+        {
+          path: "password",
+          element: <Password />,
+        },
+      ],
+    },
 
     {
       path: "success",
@@ -137,15 +107,6 @@ export default function PublicRoutes({ isAdmin }) {
         </Suspense>
       ),
     },
-
-    // {
-    //   path: "bill",
-    //   element: (
-    //     <Suspense fallback={<Loading />}>
-    //       <Bill />
-    //     </Suspense>
-    //   ),
-    // },
 
     {
       path: "login",

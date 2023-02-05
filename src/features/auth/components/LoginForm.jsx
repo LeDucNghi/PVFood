@@ -94,19 +94,19 @@ export default function LoginForm() {
               <Typography>
                 Don't have an account?{" "}
                 <WavyLink duration={1000} color="#f08080" to="/register">
-                  <Link
+                  {/* <Link
                     variant="subtitle2"
                     underline="hover"
                     component={RouterLink}
-                  >
-                    Signup
-                  </Link>
+                  > */}
+                  Signup
+                  {/* </Link> */}
                 </WavyLink>
               </Typography>
 
-              <Link variant="subtitle2" underline="hover">
+              {/* <Link variant="subtitle2" underline="hover">
                 Forgot password?
-              </Link>
+              </Link> */}
             </Stack>
 
             <LoadingButton

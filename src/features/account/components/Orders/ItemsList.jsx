@@ -26,7 +26,7 @@ export default function ItemsList({ orderDetail }) {
   const orderList = orderDetail ? orderDetail.info.shoppingInfo.items : [];
 
   return (
-    <Box sx={{ mt: "2em", height: "200px", overflow: "auto" }}>
+    <Box className="order_detail_list_items">
       <Grid
         container
         direction="column"
@@ -46,12 +46,12 @@ export default function ItemsList({ orderDetail }) {
                   width: "50%",
                   display: "flex",
                   flexDirection: "column",
-                  // margin: "0 2em",
-                  // bgcolor: "violet",
                 }}
               >
-                <Typography sx={{ fontWeight: 600 }}>{items.name} </Typography>
-                <Typography sx={{ fontWeight: 600 }}>
+                <Typography sx={{ fontWeight: 600, fontSize: "0.8em" }}>
+                  {items.name}{" "}
+                </Typography>
+                <Typography sx={{ fontWeight: 600, fontSize: "0.8em" }}>
                   {" "}
                   {parseFloat(items.price * 1000).toLocaleString("it-IT", {
                     style: "currency",
@@ -59,11 +59,16 @@ export default function ItemsList({ orderDetail }) {
                   })}{" "}
                 </Typography>
               </Box>
-              <Typography sx={{ fontWeight: 600 }}>
+              <Typography sx={{ fontWeight: 600, fontSize: "0.8em" }}>
                 Qty. {items.qty}{" "}
               </Typography>
               <Typography
-                sx={{ width: "20%", textAlign: "left", fontWeight: 600 }}
+                sx={{
+                  width: "20%",
+                  textAlign: "left",
+                  fontWeight: 600,
+                  fontSize: "0.8em",
+                }}
               >
                 Total.{" "}
                 {parseFloat(items.price * items.qty * 1000).toLocaleString(

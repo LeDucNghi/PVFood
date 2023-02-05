@@ -11,9 +11,10 @@ import OutlinedInput from "@mui/material/OutlinedInput";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { handleChangePassword } from "../accountThunk";
-import { styled } from "@mui/styles";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+
+// import { styled } from "@mui/styles";
 
 export default function Password() {
   const dispatch = useDispatch();
@@ -185,8 +186,19 @@ export default function Password() {
               />
             </FormControl>
 
-            <ColorButton
-              sx={{ margin: "2em 0" }}
+            <LoadingButton
+              sx={{
+                margin: "2em 0",
+                color: "#000",
+                backgroundColor: "#f3e0d0", //   "&:hover": {
+
+                "&:hover": {
+                  backgroundColor: "#f5e3cf",
+                  "&:disabled": {
+                    cursor: "not-allowed",
+                  },
+                },
+              }}
               fullWidth
               size="large"
               type="submit"
@@ -195,7 +207,7 @@ export default function Password() {
               loading={isSubmitting}
             >
               Save
-            </ColorButton>
+            </LoadingButton>
           </Form>
         );
       }}
@@ -203,14 +215,14 @@ export default function Password() {
   );
 }
 
-const ColorButton = styled(LoadingButton)(({ theme }) => ({
-  color: "#000",
+// const ColorButton = styled(LoadingButton)(({ theme }) => ({
+//   color: "#000",
 
-  backgroundColor: "#f3e0d0",
-  "&:hover": {
-    backgroundColor: "#f5e3cf",
-    "&:disabled": {
-      cursor: "not-allowed",
-    },
-  },
-}));
+//   backgroundColor: "#f3e0d0",
+//   "&:hover": {
+//     backgroundColor: "#f5e3cf",
+//     "&:disabled": {
+//       cursor: "not-allowed",
+//     },
+//   },
+// }));

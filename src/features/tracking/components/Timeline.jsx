@@ -53,9 +53,9 @@ export default function Timelines({ orderStatus, orderDetail }) {
 
 const ColorlibStepIcon = ({ active, completed, icon }) => {
   const icons = {
-    1: <AccessTimeIcon fontSize="large" />,
-    2: <LocalShippingIcon fontSize="large" />,
-    3: <CheckCircleIcon fontSize="large" />,
+    1: <AccessTimeIcon fontSize="medium" />,
+    2: <LocalShippingIcon fontSize="medium" />,
+    3: <CheckCircleIcon fontSize="medium" />,
   };
 
   return (

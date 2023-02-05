@@ -22,18 +22,17 @@ export default function InputField({
 }) {
   return (
     <Box
-      sx={{
-        flexGrow: 1,
-        width: "40%",
-        display: "flex",
-        padding: "0 24px",
-      }}
+    // sx={{
+    //   flexGrow: 1,
+    //   width: "40%",
+    //   display: "flex",
+    //   padding: "0 24px",
+    // }}
     >
       <Grid
         container
         direction="column"
         justifyContent="center"
-        // alignItems="center"
         spacing={{ xs: 2, md: 3 }}
         columns={{ xs: 3, sm: 6, md: 9 }}
       >
