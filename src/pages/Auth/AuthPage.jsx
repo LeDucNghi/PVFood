@@ -10,6 +10,7 @@ import useResponsive from "hooks/useResponsive";
 const RootStyle = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     display: "flex",
+    fontSize: "15px",
   },
 }));
 
@@ -71,6 +72,7 @@ export default function AuthPage({
               mb: 5,
               textAlign: "center",
               fontFamily: "Krona One",
+              fontSize: "1.5em",
             }}
           >
             {mdUpContent}
@@ -82,7 +84,7 @@ export default function AuthPage({
       <Container>
         <ContentStyle>
           <Typography
-            sx={{ fontFamily: "Krona One" }}
+            sx={{ fontFamily: "Krona One", fontSize: "1.8em" }}
             variant="h4"
             gutterBottom
           >
@@ -93,8 +95,8 @@ export default function AuthPage({
             sx={{
               color: "#000",
               mb: 5,
-              // fontFamily: "Montserrat",
-              fontWeight: "700",
+              fontSize: "1em",
+              fontWeight: "600",
             }}
           >
             {contentSub}

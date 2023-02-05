@@ -24,6 +24,8 @@ function Rate({ setFieldValue }) {
         display: "flex",
         margin: "0.5em 0 0.5em 0.8em",
         height: "1.5em",
+
+        // bgcolor: "#000",
       }}
     >
       <StyledRating

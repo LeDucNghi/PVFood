@@ -4,7 +4,6 @@ import { withErrorBoundary } from "react-error-boundary";
 
 function Login() {
   return (
-    // <>Login</>
     <AuthPage
       title="Login"
       smUpContent="Don’t have an account?"

@@ -89,24 +89,20 @@ export default function LoginForm() {
               direction="row"
               alignItems="center"
               justifyContent="space-between"
-              sx={{ my: 2 }}
+              sx={{ my: 2, fontSize: "15px" }}
             >
               <Typography>
                 Don't have an account?{" "}
                 <WavyLink duration={1000} color="#f08080" to="/register">
-                  {/* <Link
+                  <Link
                     variant="subtitle2"
                     underline="hover"
-                    component={RouterLink}
-                  > */}
-                  Signup
-                  {/* </Link> */}
+                    // component={RouterLink}
+                  >
+                    Signup
+                  </Link>
                 </WavyLink>
               </Typography>
-
-              {/* <Link variant="subtitle2" underline="hover">
-                Forgot password?
-              </Link> */}
             </Stack>
 
             <LoadingButton
@@ -115,6 +111,19 @@ export default function LoginForm() {
               type="submit"
               variant="contained"
               loading={isSubmitting}
+              sx={{
+                color: "#000",
+                fontSize: "0.8em",
+                fontWeight: 600,
+                fontFamily: "Krona One",
+                backgroundColor: "#d4a0a2",
+                "&:hover": {
+                  backgroundColor: "#d4a0a2",
+                  "&:disabled": {
+                    cursor: "not-allowed",
+                  },
+                },
+              }}
             >
               Login
             </LoadingButton>

@@ -132,10 +132,10 @@ hsl(210 13% 62% / 0.16) 0px 4px 8px 0px */
 .order_detail_items .title {
   color: #919eab;
   font-family: "Public Sans";
-  font-size: 12px;
+  font-size: 0.8em;
   font-weight: 700;
   /* margin: 0 0 12px; */
-  line-height: 22px;
+  line-height: 1.5em;
 }
 
 .order_detail_items .address,
@@ -145,6 +145,10 @@ hsl(210 13% 62% / 0.16) 0px 4px 8px 0px */
   font-size: 0.8em;
   font-weight: 600;
   /* line-height: 22px; */
+}
+
+.order_detail_items .name {
+  padding-bottom: 1em;
 }
 
 .allorder_container .order_detail .order_detail_address .order_address_right {

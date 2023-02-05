@@ -13,9 +13,13 @@
   margin: auto 0;
   overflow: auto;
   border-radius: 16px;
-  border: 0.5px solid #ccc;
+  /* border: 0.5px solid #ccc; */
   background: #fff;
-  box-shadow: 10px 10px 10px #c4c4c4, -10px -10px 10px #ffffff;
+  box-shadow: 1.4px 1.4px 1.7px rgba(0, 0, 0, 0.012),
+    3.3px 3.3px 4px rgba(0, 0, 0, 0.022), 6.3px 6.3px 7.5px rgba(0, 0, 0, 0.029),
+    11.2px 11.2px 13.4px rgba(0, 0, 0, 0.036),
+    20.9px 20.9px 25.1px rgba(0, 0, 0, 0.042),
+    50px 50px 60px rgba(0, 0, 0, 0.07);
   transition: all 0.5s ease-in-out;
 }
 
