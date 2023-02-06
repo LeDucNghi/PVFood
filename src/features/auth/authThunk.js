@@ -46,13 +46,6 @@ export const unregisterAuthObserver = firebase
     };
 
     saveCookie(userInfo);
-
-    // window.location.reload();
-
-    // if (token) store.dispatch(loginSuccess(token));
-
-    // console.log("logged user", user._delegate, user);
-    // console.log("user token : ", token);
   });
 
 export const signinWithOAuth = (values) => async (dispatch, getState) => {
@@ -67,16 +60,12 @@ export const signinWithOAuth = (values) => async (dispatch, getState) => {
   try {
     const res = await axios.post(rootApi.signInWithEmailApiUrl, body, config);
     if (res.data) dispatch(loginSuccess());
-    // window.location.href = `/profile`;
-    // window.location.reload();
+
     const newData = {
       ...res.data,
       role: `user`,
     };
-    console.log(
-      "🚀 ~ file: authThunk.js ~ line 74 ~ signinWithOAuth ~ newData",
-      newData
-    );
+
     await Swal.fire(`Login successful`, ``, "success");
 
     await saveCookie(newData);
