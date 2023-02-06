@@ -47,14 +47,11 @@
   height: auto;
   margin: 0.5em 0;
 
-  /* background: #000; */
-
   display: flex;
   align-items: center;
 
   cursor: pointer;
-  /* color: #999; */
-  color: #2e2e2e;
+  /* background-color: #999; */
   font-size: 1.2em;
   font-weight: 900;
   user-select: none;
@@ -81,7 +78,7 @@
 
   color: #d4a0a2;
   font-weight: 600;
-  background-color: #ccc;
+  background-color: #e0e0e0;
   cursor: pointer;
 
   border-radius: 0.1em;
@@ -99,21 +96,6 @@
   opacity: 1;
   visibility: visible;
 }
-
-/* .filter_btn .checkmark::after {
-  content: "";
-  position: absolute;
-  font-family: fontAwesome;
-  font-size: 1em;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #d4a0a2;
-  opacity: 0;
-  visibility: hidden;
-
-  transition: all 0.2s ease-in-out 0s;
-} */
 
 .filter_btn input:checked ~ .checkmark .check {
   opacity: 1;

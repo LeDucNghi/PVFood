@@ -221,27 +221,24 @@ export const handleDeleteProduct = (item) => (dispatch, getState) => {
   if (existedItem) dispatch(removeProduct({ item }));
 };
 
-// get user'cart from fire store
-export const getFirestoreCart =
-  (accountDetail) => async (dispatch, getState) => {
-    const localCart = getState().cart.list;
-
-    if (accountDetail && accountDetail.cart) {
-      dispatch(setFirebaseCart(accountDetail.cart));
-      // localStorage.setItem("cart", accountDetail.cart);
-    } else dispatch(setFirebaseCart(localCart));
-  };
-
 export const handleChangeUserFirestoreCart =
-  () => async (dispatch, getState) => {
+  (methods) => async (dispatch, getState) => {
     const account = getState().account.accountDetail;
 
     const localCart = getState().cart.list;
+    const usersRef = doc(db, "users", `${account.data.email}`);
 
-    if (account && account.cart) {
+    if (methods === "get") {
       dispatch(setFirebaseCart(account.cart));
-      // localStorage.setItem("cart", accountDetail.cart);
-    } else dispatch(setFirebaseCart(localCart));
+    } else if (methods === "post") {
+      updateDoc(usersRef, {
+        cart: localCart,
+      });
+    }
+
+    // if (account && account.cart) {
+    //   // localStorage.setItem("cart", accountDetail.cart);
+    // } else dispatch(setFirebaseCart(localCart));
   };
 
 export const handleRatingChange = (

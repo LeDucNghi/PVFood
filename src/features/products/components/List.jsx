@@ -8,11 +8,11 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import { useState } from "react";
 
 export default function List({ addToCart, productLists }) {
-  const [open, setOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const [items, setItems] = useState(null);
 
   const showQuickView = (item) => {
-    setOpen(!open);
+    setOpenModal(!openModal);
 
     setItems(item);
   };
@@ -63,8 +63,8 @@ export default function List({ addToCart, productLists }) {
 
       <QuickView
         addToCart={addToCart}
-        open={open}
-        setOpen={setOpen}
+        openModal={openModal}
+        setOpenModal={setOpenModal}
         items={items}
       />
     </>

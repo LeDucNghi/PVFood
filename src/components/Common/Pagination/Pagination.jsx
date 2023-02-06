@@ -1,4 +1,4 @@
-import "./pagination.css";
+import "./Pagination.css";
 
 import {
   selectParams,
@@ -48,9 +48,8 @@ function Indicator({ triggerFunc }) {
   return (
     <div className="pagination">
       <Pagination
-        sx={{ margin: "0 43%" }}
+        // sx={{ margin: "0 43%" }}
         page={page}
-        // count={pagination ? pagination : 0}
         count={totalPages}
         size="large"
         onChange={(event, newPage) => handlePageChange(event, newPage)}
@@ -62,11 +61,6 @@ function Indicator({ triggerFunc }) {
 Indicator.propTypes = {
   triggerFunc: PropTypes.func,
 };
-
-// Indicator.defaultProps = {
-//   title: "Product detail",
-//   content: "Product detail",
-// };
 
 const Error = ({ error }) => {
   return <div>{error.message}</div>;

@@ -1,12 +1,19 @@
 import { Button } from "@mui/material";
 import CustomModal from "components/Common/Modal/Modal";
+import Notification from "components/Common/Notification/Notification";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-export default function QuickView({ addToCart, open, setOpen, items }) {
+export default function QuickView({
+  addToCart,
+  openModal,
+  setOpenModal,
+  items,
+}) {
   const navigate = useNavigate();
 
   var [imageItems, setImageItems] = useState(null);
+  const [openNotify, setOpenNotify] = useState(false);
 
   const handleChangeImg = (item) => {
     imageItems = item.imageUrl;
@@ -15,7 +22,7 @@ export default function QuickView({ addToCart, open, setOpen, items }) {
 
   const handleCloseQuickView = () => {
     navigate(`/product/${items.id}`);
-    setOpen(!open);
+    setOpenModal(!openModal);
   };
 
   return (
@@ -24,8 +31,8 @@ export default function QuickView({ addToCart, open, setOpen, items }) {
         width: "800px",
         height: "465px",
       }}
-      openModal={open}
-      onClose={() => setOpen(!open)}
+      openModal={openModal}
+      onClose={() => setOpenModal(!openModal)}
     >
       {items && (
         <div className="tag_items_modal_container">
@@ -51,23 +58,25 @@ export default function QuickView({ addToCart, open, setOpen, items }) {
             </h3>
             <p>{items.description}</p>
 
-            <ul className="quickview_image_tag">
-              {items.imageTags.map((item, key) => {
-                return (
-                  <li
-                    onClick={() => handleChangeImg(item)}
-                    className={
-                      imageItems === item.imageUrl
-                        ? "quickview_image_item is_chosen"
-                        : "quickview_image_item"
-                    }
-                    key={key}
-                  >
-                    <img src={item.imageUrl} alt="" />
-                  </li>
-                );
-              })}
-            </ul>
+            {items.imageTags.length !== 0 && (
+              <ul className="quickview_image_tag">
+                {items.imageTags.map((item, key) => {
+                  return (
+                    <li
+                      onClick={() => handleChangeImg(item)}
+                      className={
+                        imageItems === item.imageUrl
+                          ? "quickview_image_item is_chosen"
+                          : "quickview_image_item"
+                      }
+                      key={key}
+                    >
+                      <img src={item.imageUrl} alt="" />
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
 
             <Button
               onClick={() => addToCart(items)}
@@ -77,6 +86,15 @@ export default function QuickView({ addToCart, open, setOpen, items }) {
               Add to cart
             </Button>
           </div>
+
+          <Notification
+            notify={{
+              message: "Add to cart successfully!!",
+              severity: "success",
+            }}
+            open={openNotify}
+            setOpen={setOpenNotify}
+          />
         </div>
       )}
     </CustomModal>

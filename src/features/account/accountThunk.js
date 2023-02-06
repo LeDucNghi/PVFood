@@ -6,7 +6,6 @@ import {
   fetchingAccount,
   fetchingOrderDetail,
   setAccountDetail,
-  setNewStatus,
 } from "./accountSlice";
 import { getAuth, updatePassword } from "firebase/auth";
 import {
@@ -66,7 +65,6 @@ export const fetchNotifications = (email) => async (dispatch, getState) => {
 export const handleConfirmReceived =
   (id, status) => async (dispatch, getState) => {
     const accountDetail = getState().account.accountDetail;
-    console.log("🚀 ~ file: accountThunk.js:69 ~ accountDetail", accountDetail);
 
     if (accountDetail) {
       const newAccountOrders = [...accountDetail.orders];
@@ -77,8 +75,6 @@ export const handleConfirmReceived =
       const ordersUserRef = doc(db, "users", `${accountDetail.data.email}`);
 
       if (status === "Cancelled") {
-        console.log("vào cancel");
-
         await Swal.fire({
           title: "Do you want to cancel this invoice?",
           // showDenyButton: true,
@@ -105,8 +101,6 @@ export const handleConfirmReceived =
           }
         });
       } else {
-        console.log("vào received");
-
         const newOrderAtIndex = {
           ...newAccountOrders[index],
           status: status,

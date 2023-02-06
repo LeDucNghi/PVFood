@@ -112,10 +112,10 @@ export default function LoginForm() {
               variant="contained"
               loading={isSubmitting}
               sx={{
-                color: "#000",
+                color: "#fff",
                 fontSize: "0.8em",
                 fontWeight: 600,
-                fontFamily: "Krona One",
+                fontFamily: "Montserrat",
                 backgroundColor: "#d4a0a2",
                 "&:hover": {
                   backgroundColor: "#d4a0a2",

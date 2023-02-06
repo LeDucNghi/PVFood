@@ -43,7 +43,7 @@ nav {
 .menu-logo .react-wavy-transitions__wavy-link {
   color: #d4a0a2;
   font-size: 3em;
-  font-family: "Rage Italic";
+  font-family: "Rage Italic", sans-serif;
   font-style: italic;
   font-weight: 400;
   text-shadow: none;

@@ -6,9 +6,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-function Notification(props) {
-  const { notify, open, setOpen } = props;
-
+function Notification({ notify, open, setOpen }) {
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;

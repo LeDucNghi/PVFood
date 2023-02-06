@@ -28,7 +28,6 @@ function Header() {
   const data = cookies.get(`information`);
 
   const accountDetail = useSelector(selectAccountDetail);
-
   const cartStorage = useSelector(selectListCart);
 
   const [openDrawer, setOpenDrawer] = useState({
@@ -39,14 +38,14 @@ function Header() {
   useEffect(() => {
     dispatch(handleFetchAll());
     if (accountDetail) {
-      dispatch(getFirestoreCart(accountDetail));
       dispatch(fetchNotifications(accountDetail.data.email));
+      dispatch(handleChangeUserFirestoreCart("get"));
     }
   }, [dispatch, accountDetail]);
 
   useEffect(() => {
-    if (accountDetail) dispatch(handleChangeUserFirestoreCart());
-  }, [cartStorage, accountDetail]);
+    if (accountDetail) dispatch(handleChangeUserFirestoreCart("post"));
+  }, [cartStorage, accountDetail, dispatch]);
 
   window.addEventListener("scroll", function () {
     const Header = this.document.querySelector("header");

@@ -1,10 +1,14 @@
 .pagination {
   position: relative;
-  /* background: #000; */
 
   width: 100%;
 
-  margin-top: 3em;
+  margin-top: 5em;
 
   /* background: red; */
+  font-size: 15px;
+}
+
+.pagination .css-1oj2twp-MuiPagination-root {
+  margin: 0 45em;
 }
