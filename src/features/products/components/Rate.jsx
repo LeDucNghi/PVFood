@@ -13,7 +13,6 @@ import { styled } from "@mui/material/styles";
 
 function Rate({ setFieldValue }) {
   const [value, setValue] = React.useState(1);
-  // const [hover, setHover] = React.useState(-1);
 
   return (
     <Box
@@ -22,10 +21,9 @@ function Rate({ setFieldValue }) {
 
         position: "relative",
         display: "flex",
-        margin: "0.5em 0 0.5em 0.8em",
+        alignItems: "center",
+        mt: "0.8em",
         height: "1.5em",
-
-        // bgcolor: "#000",
       }}
     >
       <StyledRating
@@ -38,9 +36,6 @@ function Rate({ setFieldValue }) {
         onChange={(event, newValue) => {
           handleRatingChange(event, newValue, setFieldValue, setValue);
         }}
-        // onChangeActive={(event, newHover) => {
-        //   setHover(newHover);
-        // }}
       />
 
       {value !== null && <Box sx={{ ml: 2 }}>{customIcons[value].label}</Box>}

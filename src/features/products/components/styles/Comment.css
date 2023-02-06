@@ -13,46 +13,53 @@
   /* background: pink; */
 }
 
-.avatar {
-  position: absolute;
+.cmt_info {
+  position: relative;
+
+  display: flex;
+  /* flex-direction: row; */
+
+  width: 100%;
+  height: 5.5em;
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 15px;
+}
+
+.cmt_info .text {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  margin-left: 1em;
+}
+
+.cmt_info .avatar {
+  position: relative;
 
   width: 4.7em;
   height: 4.7em;
   border-radius: 50%;
-  background: #000;
 }
 
-.avatar img {
+.cmt_info .avatar img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.name {
+.cmt_info .text .name {
   position: relative;
-
-  top: -2em;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   letter-spacing: -0.017em;
   white-space: nowrap;
-  margin-left: 4.5em;
-}
-
-.cmt_info {
-  position: relative;
-
-  display: flex;
-  flex-direction: row;
-
-  width: 100%;
-  height: 5.5em;
-  font-family: "Montserrat", sans-serif;
-
-  background: red;
+  /* margin-left: 4.5em; */
 }
 
 .star {
@@ -65,7 +72,6 @@
   top: 80px;
   width: 720px;
   height: 150px;
-  /* background: #000; */
 }
 
 textarea {

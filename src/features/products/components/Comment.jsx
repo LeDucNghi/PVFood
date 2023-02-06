@@ -40,11 +40,13 @@ export default function Comment({ id }) {
                 />
               </div>
 
-              <Rate setFieldValue={setFieldValue} />
+              <div className="text">
+                <span className="name">
+                  {account && account.name ? account.name : "Guest"}
+                </span>
 
-              <span className="name">
-                {account && account.name ? account.name : "Guest"}
-              </span>
+                <Rate setFieldValue={setFieldValue} />
+              </div>
             </div>
             <div className="text_area">
               <Field
