@@ -2,7 +2,13 @@ import { TextField } from "@mui/material";
 import { selectAccountDetail } from "features/account/accountSlice";
 import { useSelector } from "react-redux";
 
-export default function ShippingAddress({ values, onChange, onBlur }) {
+export default function ShippingAddress({
+  values,
+  onChange,
+  onBlur,
+  errors,
+  touched,
+}) {
   const account = useSelector(selectAccountDetail);
 
   return (
@@ -17,7 +23,10 @@ export default function ShippingAddress({ values, onChange, onBlur }) {
         name="fullName"
         onBlur={onBlur}
         onChange={onChange}
+        error={touched.fullName && Boolean(errors.fullName)}
+        helperText={touched.fullName && errors.fullName}
       />
+
       <TextField
         value={values.phone}
         type="text"
@@ -28,7 +37,10 @@ export default function ShippingAddress({ values, onChange, onBlur }) {
         name="phone"
         onBlur={onBlur}
         onChange={onChange}
+        error={touched.phone && Boolean(errors.phone)}
+        helperText={touched.phone && errors.phone}
       />
+
       {!account && (
         <TextField
           value={values.email}
@@ -40,6 +52,8 @@ export default function ShippingAddress({ values, onChange, onBlur }) {
           name="email"
           onBlur={onBlur}
           onChange={onChange}
+          error={touched.email && Boolean(errors.email)}
+          helperText={touched.email && errors.email}
         />
       )}
       <TextField
@@ -52,6 +66,8 @@ export default function ShippingAddress({ values, onChange, onBlur }) {
         name="address"
         onBlur={onBlur}
         onChange={onChange}
+        error={touched.address && Boolean(errors.address)}
+        helperText={touched.address && errors.address}
       />
     </div>
   );

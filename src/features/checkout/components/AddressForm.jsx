@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import DeliveryMethods from "./Delivery";
 import { PaymentMethod } from "./PaymentMethods";
 import ShippingAddress from "./ShippingAddress";
+import { checkoutValidationSchema } from "formik/user";
 import { handleCheckInfo } from "../checkoutThunk";
 import { selectAccountDetail } from "features/account/accountSlice";
 
@@ -38,19 +39,30 @@ export function AddressForm({ setValue }) {
     address: defaultAddress ? defaultAddress.address : "",
     deliveryName: "",
     paymentMethods: "",
-    email: accountDetail ? accountDetail.email : "",
+    email: accountDetail ? accountDetail.data.email : "",
   };
 
   return (
     <Formik
       enableReinitialize={true}
       initialValues={checkoutInitialValues}
-      // validationSchema={validationSchema}
+      validationSchema={checkoutValidationSchema}
       onSubmit={(values) => dispatch(handleCheckInfo(values, setValue, info))}
     >
       {(formikProps) => {
-        const { values, isValid, handleBlur, handleChange, dirty } =
-          formikProps;
+        const {
+          values,
+          isValid,
+          handleBlur,
+          handleChange,
+          dirty,
+          errors,
+          touched,
+        } = formikProps;
+        console.log(
+          "🚀 ~ file: AddressForm.jsx:62 ~ AddressForm ~ values",
+          values
+        );
         return (
           <Form className="checkout_address">
             <h2>Shipping address</h2>
@@ -59,34 +71,39 @@ export function AddressForm({ setValue }) {
                 values={values}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                errors={errors}
+                touched={touched}
               />
 
               <div className="checkout_delivery">
                 <h2>Delivery methods</h2>
 
-                <DeliveryMethods />
+                <DeliveryMethods
+                  onChange={handleChange}
+                  errors={errors}
+                  touched={touched}
+                />
 
                 <h2>Choose a payment method</h2>
 
-                <PaymentMethod />
+                <PaymentMethod
+                  onChange={handleChange}
+                  errors={errors}
+                  touched={touched}
+                />
 
                 <div className="required">
                   <b>* Required Field</b>
                 </div>
                 <div className="checkout_btn">
-                  <Button
-                    variant="outlined"
-                    type="button"
-                    className="button"
-                    // onClick={() => navigate(`/product/food`)} // onClick={() => navigator.clipboard.writeText(`bla bla`)}
-                  >
+                  <Button variant="outlined" type="button" className="button">
                     Continue shopping
                   </Button>
 
                   <Button
                     type="submit"
                     className="button"
-                    disabled={isLoading || !isValid || !dirty} // onClick={showPaymentForm}
+                    // disabled={isLoading || !isValid || !dirty}
                     variant="contained"
                   >
                     {isLoading ? (

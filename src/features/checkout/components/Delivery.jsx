@@ -1,10 +1,11 @@
 import "pages/Checkout/Checkout.css";
 
-import { Field } from "formik";
+import { ErrorMessage, Field } from "formik";
+
 import { deliveryMethods } from "__mock__";
 import { useState } from "react";
 
-export default function DeliveryMethods() {
+export default function DeliveryMethods({ onChange, errors, touched }) {
   const [deliveryId, setDeliveryId] = useState("");
 
   const activeDeliver = (id) => {
@@ -35,11 +36,15 @@ export default function DeliveryMethods() {
                 <img src={item.image} alt="" />
                 <h3>{item.deliveryName} </h3>
               </div>
+
               <Field
                 type="radio"
                 name="deliveryName"
                 value={item.deliveryName}
+                // onChange={onChange}
               />
+              <ErrorMessage name="deliveryName" />
+
               <span className="checkmark"></span>
             </label>
           );

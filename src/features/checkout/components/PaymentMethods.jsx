@@ -1,11 +1,12 @@
 import "pages/Checkout/Checkout.css";
 
+import { ErrorMessage, Field } from "formik";
+
 import BankingModal from "./BankingModal";
-import { Field } from "formik";
 import { paymentMethods } from "__mock__";
 import { useState } from "react";
 
-export function PaymentMethod() {
+export function PaymentMethod({ onChange }) {
   const [deliverId, setDeliverId] = useState(-1);
   const [open, setOpen] = useState(false);
 
@@ -40,7 +41,10 @@ export function PaymentMethod() {
                 name="paymentMethods"
                 // defaultChecked={checked}
                 value={item.paymentName}
+                // onChange={onChange}
               />
+              <ErrorMessage name="paymentMethods" />
+
               <span className="checkmark"></span>
             </label>
           );

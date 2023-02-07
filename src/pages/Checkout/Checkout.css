@@ -85,8 +85,6 @@
   width: 100%;
   max-height: 15em;
   overflow: auto;
-
-  /* background: pink; */
 }
 
 .checkout_bag .checkout_help {
@@ -212,8 +210,6 @@
 
   list-style: none;
 
-  /* padding: 1.5em 0em; */
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -223,34 +219,27 @@
 }
 
 .checkout_item li p {
-  position: absolute;
-  font-size: 1em;
-  padding: 0em 0.5em;
   font-weight: 600;
-  color: #777777;
-  white-space: nowrap;
   font-family: "Montserrat", sans-serif;
 }
 
 .checkout_item li .cart_name {
-  width: 50%;
-  padding: 0 0.5em;
   font-size: 0.9em;
-  font-weight: 600;
-  line-height: 30px;
-  /* font-family: "Ariata Display"; */
+  color: #d4a0a2;
 
   display: -webkit-box;
-  line-clamp: 1;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .checkout_item li .cart_info {
-  width: 30%;
-  height: 50px;
-  margin-right: 10em;
+  width: 50%;
+  height: 3.3em;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .checkout_item .cart_img {
@@ -277,8 +266,8 @@
 .checkout_item .quantity {
   position: relative;
 
-  width: 81px;
-  height: 40px;
+  width: 5.4em;
+  height: 2.7em;
 
   display: flex;
   justify-content: space-between;

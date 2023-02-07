@@ -1,5 +1,4 @@
 import { Images } from "constants/images";
-import { fake_options } from "formik/admin";
 import { faker } from "@faker-js/faker";
 import { sample } from "lodash";
 
@@ -95,9 +94,10 @@ export const users = [...Array(24)].map((_, index) => ({
   // country: faker.address.country(),
   // city: faker.address.city(),
   // state: faker.address.state(),
-  country: sample(fake_options),
-  city: sample(fake_options),
-  state: sample(fake_options),
+
+  // country: sample(fake_options),
+  // city: sample(fake_options),
+  // state: sample(fake_options),
   address: faker.address.buildingNumber(),
   company: faker.company.name(),
   isVerified: faker.datatype.boolean(),

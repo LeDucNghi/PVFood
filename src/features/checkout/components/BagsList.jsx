@@ -15,8 +15,7 @@ export default function BagsList() {
               <div className="cart_info">
                 <p className="cart_name">{item.name}</p>
                 <p className="cart_price">
-                  {" "}
-                  <br />
+
                   {parseFloat(item.price * 1000).toLocaleString("it-IT", {
                     style: "currency",
                     currency: "VND", // minimumFractionDigits: 3,
