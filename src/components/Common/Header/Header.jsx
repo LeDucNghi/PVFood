@@ -67,7 +67,7 @@ function Header() {
         // onClick={() => dispatch(handleLogout())}
       >
         <WavyLink duration={1000} color="#f08080" to="/home">
-          PVFood
+          PV Store
         </WavyLink>
       </div>
 

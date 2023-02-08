@@ -20,7 +20,7 @@ function About(props) {
 
       <div className="about_info">
         <div className="info_content">
-          <h2>PV Food</h2>
+          <h2>PV Store</h2>
 
           <p>
             Established since 2015, PV Food can only be reached by boat, and

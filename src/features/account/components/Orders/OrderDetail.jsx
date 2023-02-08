@@ -36,11 +36,11 @@ export default function OrderDetail({
     return (
       <Empty
         width="100%"
-        height="30%"
+        height="50%"
         showButton={false}
         title="Please choose any orders to see the detail"
         image={Images.emptyCart}
-        // margin="15em 0"
+        margin="8em 0"
       />
     );
 
