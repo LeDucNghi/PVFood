@@ -1,6 +1,9 @@
 import "./Footer.css";
 
+import FacebookIcon from "@mui/icons-material/Facebook";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import { Images } from "constants/images";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import React from "react";
 import { useLocation } from "react-router-dom";
 
@@ -69,9 +72,9 @@ function Footer() {
             <div className="content_connect">
               <h2>Let's connect</h2>
               <div className="connect_icon">
-                <i className="fa fa-facebook" aria-hidden="true"></i>
-                <i className="fa fa-instagram" aria-hidden="true"></i>
-                <i className="fa fa-instagram" aria-hidden="true"></i>
+                <FacebookIcon fontSize="large" />
+                <InstagramIcon fontSize="large" />
+                <GitHubIcon fontSize="large" />
               </div>
             </div>
             <div className="content_feedback">

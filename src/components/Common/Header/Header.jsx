@@ -2,7 +2,6 @@ import "./Header.css";
 import "./HeaderActive.css";
 
 import {
-  getFirestoreCart,
   handleChangeUserFirestoreCart,
   handleFetchAll,
 } from "features/products/productThunk";

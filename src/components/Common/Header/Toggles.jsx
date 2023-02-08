@@ -46,7 +46,7 @@ export default function Toggles({ data, setOpenDrawer }) {
 
       {data ? (
         <>
-          <NotificationsPopover />
+          {/* <NotificationsPopover /> */}
           <LoginHover />
         </>
       ) : (

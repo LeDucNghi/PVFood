@@ -148,7 +148,7 @@ hsl(210 13% 62% / 0.16) 0px 4px 8px 0px */
 }
 
 .order_detail_items .name {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 
 .allorder_container .order_detail .order_detail_address .order_address_right {
