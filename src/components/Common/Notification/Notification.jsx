@@ -7,6 +7,10 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 function Notification({ notify, setNotify }) {
+  // snackbar alert ( vertical ) positions : top / bottom
+  // ______________ ( horizontal )________ : center / right / left
+  // alert severity                        : error / warning / info / success
+
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
@@ -23,7 +27,7 @@ function Notification({ notify, setNotify }) {
       }}
       open={notify.open}
       onClose={handleClose}
-      autoHideDuration={5000}
+      autoHideDuration={notify.autoHideDuration}
     >
       <Alert
         onClose={handleClose}

@@ -20,6 +20,7 @@ export default function QuickView({
     severity: "success",
     vertical: "",
     horizontal: "",
+    autoHideDuration: 0,
   });
 
   const handleChangeImg = (item) => {
@@ -32,8 +33,8 @@ export default function QuickView({
     setOpenModal(!openModal);
   };
 
-  const handleAddToCart = (items) => {
-    addToCart(items);
+  const handleAddToCart = (item) => {
+    addToCart({ item, isQuickView: true });
 
     setNotify({
       open: true,
@@ -41,6 +42,7 @@ export default function QuickView({
       severity: "success",
       vertical: "bottom",
       horizontal: "right",
+      autoHideDuration: 1000,
     });
   };
 

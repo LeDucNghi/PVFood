@@ -36,7 +36,12 @@ export default function List({ addToCart, productLists }) {
                     <br />
                     <div className="content_button">
                       <Tooltip
-                        onClick={() => addToCart(item)}
+                        onClick={() =>
+                          addToCart({
+                            item,
+                            isQuickView: false,
+                          })
+                        }
                         arrow
                         title="Add to cart"
                       >

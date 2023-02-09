@@ -22,24 +22,28 @@ function ProductList() {
   const isLoading = useSelector(selectIsLoading);
   var [filterName, setFilterName] = useState("best seller");
 
-  const handleAddToCart = async (item) => {
+  const handleAddToCart = async ({ item, isQuickView }) => {
     const existedItem = await cartStorage.find((x) => x.id === item.id);
     if (existedItem) {
       await dispatch(updateQty(item));
-      await Swal.fire({
-        icon: "success",
-        title: "Add to cart successfully!!",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+      if (!isQuickView) {
+        await Swal.fire({
+          icon: "success",
+          title: "Add to cart successfully!!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
     } else {
       await dispatch(addProduct(item));
-      await Swal.fire({
-        icon: "success",
-        title: "Add to cart successfully!!",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+      if (!isQuickView) {
+        await Swal.fire({
+          icon: "success",
+          title: "Add to cart successfully!!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      }
     }
   };
 
