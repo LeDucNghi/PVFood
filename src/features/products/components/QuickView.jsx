@@ -13,7 +13,6 @@ export default function QuickView({
   const navigate = useNavigate();
 
   var [imageItems, setImageItems] = useState(null);
-  // const [openNotify, setOpenNotify] = useState(false);
   const [notify, setNotify] = useState({
     open: false,
     message: "",

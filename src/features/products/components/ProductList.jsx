@@ -49,11 +49,8 @@ function ProductList() {
 
   return (
     <div className="product_container">
-      <Filter
-        filterName={filterName}
-        setFilterName={setFilterName}
-        // setIsLoading={setIsLoading}
-      />
+      <Filter filterName={filterName} setFilterName={setFilterName} />
+
       {isLoading === true ? (
         <div className="waiting">
           <Loading />
