@@ -4,13 +4,13 @@ import { Form, Formik } from "formik";
 import {
   IconButton,
   InputAdornment,
+  Link,
   Stack,
   TextField,
   Typography,
 } from "@mui/material";
 
 import Iconify from "components/Common/Header/Iconify";
-import { Link } from "react-router-dom";
 import { LoadingButton } from "@mui/lab";
 import { WavyLink } from "react-wavy-transitions";
 import { createUser } from "../authThunk";
@@ -133,13 +133,13 @@ export default function RegisterForm() {
                 <Typography>
                   Already have an account?{" "}
                   <WavyLink duration={1000} color="#f08080" to="/login">
-                    {/* <Link
+                    <Link
                       variant="subtitle2"
                       underline="hover"
                       // component={RouterLink}
-                    > */}
+                    >
                       Signin
-                    {/* </Link> */}
+                    </Link>
                   </WavyLink>
                 </Typography>
               </Stack>

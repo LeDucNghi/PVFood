@@ -9,8 +9,8 @@ export default function Register() {
       smUpRouteText="Login"
       smUpRoute="/login"
       mdUpContent="Sign up to receive many attractive gifts"
-      contentTitle=" Get started absolutely free."
-      contentSub="Free forever. No credit card needed."
+      contentTitle=" Get started."
+      // contentSub="Free forever. No credit card needed."
     >
       <RegisterForm />
     </AuthPage>
