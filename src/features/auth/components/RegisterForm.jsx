@@ -133,13 +133,13 @@ export default function RegisterForm() {
                 <Typography>
                   Already have an account?{" "}
                   <WavyLink duration={1000} color="#f08080" to="/login">
-                    <Link
+                    {/* <Link
                       variant="subtitle2"
                       underline="hover"
                       // component={RouterLink}
-                    >
+                    > */}
                       Signin
-                    </Link>
+                    {/* </Link> */}
                   </WavyLink>
                 </Typography>
               </Stack>

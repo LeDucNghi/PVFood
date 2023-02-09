@@ -52,6 +52,7 @@ function Header() {
   });
 
   if (pathname === `/login`) return <></>;
+  if (pathname === `/register`) return <></>;
   if (pathname === `/admin`) return <></>;
   if (pathname === `/success`) return <></>;
   if (pathname === `/dashboard/app`) return <></>;

@@ -93,7 +93,7 @@
   border-radius: 10px;
   background: rgba(245, 245, 245);
   margin: 2em auto;
-  border-top: 2px solid rgb(245, 245, 245);
+  border-top: 2px solid #999;
   transition: all 0.2s ease-in;
 }
 
@@ -395,12 +395,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-
-  /* background: violet; */
-  /* display: grid; */
-  /* grid-template-columns: repeat(6, 1fr); */
-  /* grid-template-rows: repeat(9, 55px); */
-  /* gap: 10px; */
 }
 
 .address_info .address_info-content {
