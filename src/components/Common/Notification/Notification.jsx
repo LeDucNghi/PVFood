@@ -6,21 +6,32 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-function Notification({ notify, open, setOpen }) {
+function Notification({ notify, setNotify }) {
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
     }
 
-    setOpen(false);
+    setNotify({ ...notify, open: false });
   };
 
   return (
-    <Snackbar open={open} onClose={handleClose} autoHideDuration={5000}>
+    <Snackbar
+      anchorOrigin={{
+        vertical: `${notify.vertical}`,
+        horizontal: `${notify.horizontal}`,
+      }}
+      open={notify.open}
+      onClose={handleClose}
+      autoHideDuration={5000}
+    >
       <Alert
         onClose={handleClose}
         severity={notify.severity}
-        sx={{ width: "100%", fontSize: "1em" }}
+        sx={{
+          width: "100%",
+          fontSize: "1em",
+        }}
       >
         {notify.message}
       </Alert>
@@ -29,5 +40,3 @@ function Notification({ notify, open, setOpen }) {
 }
 
 export default Notification;
-
-export const ErrorNotification = ({ message }) => {};

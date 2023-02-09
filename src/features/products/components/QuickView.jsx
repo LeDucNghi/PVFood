@@ -13,7 +13,14 @@ export default function QuickView({
   const navigate = useNavigate();
 
   var [imageItems, setImageItems] = useState(null);
-  const [openNotify, setOpenNotify] = useState(false);
+  // const [openNotify, setOpenNotify] = useState(false);
+  const [notify, setNotify] = useState({
+    open: false,
+    message: "",
+    severity: "success",
+    vertical: "",
+    horizontal: "",
+  });
 
   const handleChangeImg = (item) => {
     imageItems = item.imageUrl;
@@ -23,6 +30,18 @@ export default function QuickView({
   const handleCloseQuickView = () => {
     navigate(`/product/${items.id}`);
     setOpenModal(!openModal);
+  };
+
+  const handleAddToCart = (items) => {
+    addToCart(items);
+
+    setNotify({
+      open: true,
+      message: "Add to cart successfully!!",
+      severity: "success",
+      vertical: "bottom",
+      horizontal: "right",
+    });
   };
 
   return (
@@ -79,7 +98,7 @@ export default function QuickView({
             )}
 
             <Button
-              onClick={() => addToCart(items)}
+              onClick={() => handleAddToCart(items)}
               variant="contained"
               className="button"
             >
@@ -87,14 +106,7 @@ export default function QuickView({
             </Button>
           </div>
 
-          <Notification
-            notify={{
-              message: "Add to cart successfully!!",
-              severity: "success",
-            }}
-            open={openNotify}
-            setOpen={setOpenNotify}
-          />
+          <Notification notify={notify} setNotify={setNotify} />
         </div>
       )}
     </CustomModal>
