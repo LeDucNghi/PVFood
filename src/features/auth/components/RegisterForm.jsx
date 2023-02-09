@@ -150,6 +150,19 @@ export default function RegisterForm() {
                 type="submit"
                 variant="contained"
                 loading={isSubmitting}
+                sx={{
+                  color: "#fff",
+                  fontSize: "0.8em",
+                  fontWeight: 600,
+                  fontFamily: "Montserrat",
+                  backgroundColor: "#d4a0a2",
+                  "&:hover": {
+                    backgroundColor: "#d4a0a2",
+                    "&:disabled": {
+                      cursor: "not-allowed",
+                    },
+                  },
+                }}
               >
                 Register
               </LoadingButton>
