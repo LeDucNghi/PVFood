@@ -5,6 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { Images } from "constants/images";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import React from "react";
+import SendIcon from "@mui/icons-material/Send";
 import { useLocation } from "react-router-dom";
 
 function Footer() {
@@ -82,9 +83,7 @@ function Footer() {
               <label htmlFor="">
                 <input type="text" />
 
-                <span>
-                  <i className="fa fa-paper-plane-o" aria-hidden="true"></i>
-                </span>
+                <SendIcon className="content_icon" />
               </label>
             </div>
           </div>

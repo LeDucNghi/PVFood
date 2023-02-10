@@ -1,5 +1,3 @@
-@import url(//db.onlinewebfonts.com/c/21400dc679986534519c638136d62dbf?family=Rage+Italic);
-
 footer {
   position: relative;
   width: 100%;
@@ -15,8 +13,6 @@ footer {
   top: 150px;
   margin: 0 auto;
   width: 100%;
-  /* height: 500px; */
-  /* background: #000; */
 }
 
 .footer_logo {
@@ -129,7 +125,7 @@ footer {
   position: relative;
 
   font-weight: 400;
-  font-family: "Rage Italic";
+  font-family: "Qwitcher Grypen", cursive;
   font-size: 2.7em;
 }
 
@@ -176,7 +172,7 @@ footer {
   outline: none;
 }
 
-.footer_content-connect .content_feedback .fa {
+.footer_content-connect .content_feedback .content_icon {
   position: absolute;
   right: 10px;
   top: 50%;
