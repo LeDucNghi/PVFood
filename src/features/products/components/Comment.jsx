@@ -66,7 +66,15 @@ export default function Comment({ id }) {
             </span>
             <div className="submit">
               <Button
-                sx={{ bgcolor: "#eda80a" }}
+                sx={{
+                  bgcolor: "#d4a0a2",
+                  "&:hover": {
+                    backgroundColor: "#d4a0a2",
+                    "&:disabled": {
+                      cursor: "not-allowed",
+                    },
+                  },
+                }}
                 disabled={!account && (isSubmitting || !isValid || !dirty)}
                 type="submit"
                 variant="contained"

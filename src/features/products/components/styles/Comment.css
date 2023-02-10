@@ -91,7 +91,12 @@ textarea::placeholder {
 
 .warn {
   position: absolute;
+
+  display: flex;
+  align-items: center;
+
   bottom: 0;
+
   font-size: 11px;
   color: #8e8e8e;
   font-weight: 600;
