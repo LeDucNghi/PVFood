@@ -159,8 +159,7 @@
 
 .thumb {
   list-style: none;
-  /* padding: 0 2em; */
-  /* background: red; */
+
   font-family: "Ariata Display";
 }
 
@@ -169,28 +168,69 @@
   font-size: 1.3em;
   text-align: left;
   cursor: pointer;
+
+  display: flex;
+  /* justify-content: space-between; */
 }
 
-.thumb li button.feedback_btn .selected,
-.thumb li button.feedback_btn .circlee {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-
+.thumb li .feedback_btn {
   position: relative;
 
-  width: 40px;
-  height: 40px;
+  width: 15em;
+  height: auto;
+
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.thumb li button.feedback_btn .circlee {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+
+  display: block;
+
+  margin: 0;
+
+  width: 3rem;
+  height: 3rem;
 
   background: #c89b7e;
+  padding: 0.5em 1em;
   border-radius: 1.625rem;
 }
 
-.thumb li button.feedback_btn .selected .icon.arrow::before,
+.thumb li button.feedback_btn .circlee .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.thumb li button.feedback_btn .circlee .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
 .thumb li button.feedback_btn .circlee .icon.arrow::before {
   position: absolute;
   content: "";
   top: -0.25rem;
-  /* right: 0.0625rem; */
-  right: 0.2rem;
+  right: 0.0625rem;
   width: 0.625rem;
   height: 0.625rem;
   border-top: 0.125rem solid #fff;
@@ -199,46 +239,37 @@
   transform: rotate(45deg);
 }
 
-/* .thumb li button.feedback_btn .selectedText, */
 .thumb li button.feedback_btn .button-text {
   -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 
-  color: #282936;
+  position: absolute;
+  inset: 0;
 
+  padding: 0.5em 0;
+
+  color: #282936;
   font-weight: 700;
   line-height: 1.6;
-  text-align: left;
-  padding: 0.3em 4em;
+  text-align: center;
   font-size: 18px;
   font-family: " Ariata Display";
   white-space: nowrap;
 }
 
-.thumb li button.feedback_btn .button-text.selectedText {
-  color: #fff;
-}
-
-.thumb li button.feedback_btn .selected,
+.thumb li button.feedback_btn .circlee.selected,
 .thumb li button:hover .circlee {
-  width: 80%;
+  width: 100%;
 }
 
-.thumb li button .circlee.selected .icon.arrow,
+.thumb li button.feedback_btn .circlee.selected .icon.arrow,
 .thumb li button:hover .circlee .icon.arrow {
   background: #fff;
   -webkit-transform: translate(1rem, 0);
   transform: translate(1rem, 0);
 }
 
-.thumb li button .selected .icon.arrow {
-  position: absolute;
-  /* left: 1em; */
-  /* transform: translate(0rem, 0); */
-}
-
-.thumb li button:hover .button-text {
+button:hover .button-text {
   color: #fff;
 }
 
@@ -271,8 +302,6 @@
   color: rgba(0, 0, 0, 0.4);
 
   font-size: 1.2em;
-  /* line-height: 1.5em; */
-  /* margin: 2.9em 0 0 0.5em; */
 }
 .banner_warning .warning_text {
   font-family: "Krona One", sans-serif;

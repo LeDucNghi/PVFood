@@ -18,11 +18,7 @@ export default function BannerLeft({
         <ul className="thumb">
           {newProductList.map((items, key) => {
             return (
-              <li
-                key={key}
-                onClick={() => handleSelectItems(items)}
-                //  to={`/product/${items.mainId}`}
-              >
+              <li key={key} onClick={() => handleSelectItems(items)}>
                 <button className="feedback_btn">
                   <span
                     className={
@@ -36,17 +32,7 @@ export default function BannerLeft({
                   >
                     <span className="icon arrow"></span>
                   </span>
-                  <span
-                    className={
-                      selectedItems && selectedItems.id === items.id
-                        ? `button-text selectedText`
-                        : items.id === 1 && !selectedItems
-                        ? `button-text selectedText`
-                        : `button-text`
-                    }
-                  >
-                    {items.name}
-                  </span>
+                  <span className="button-text">{items.name}</span>
                 </button>
               </li>
             );

@@ -41,10 +41,14 @@ nav {
 
 .menu-logo .react-wavy-transitions__wavy-link {
   color: #d4a0a2;
-  font-size: 2.5em;
+  font-size: 2em;
+  font-family: "Randrake", sans-serif;
+
   /* font-family: "Rage Italic", sans-serif; */
-  font-family: "EB Garamond", serif;
-  font-weight: 400;
+  /* font-family: "Krona One", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-style: italic;
+  font-weight: 500;
   text-shadow: none;
   z-index: 1;
 }
