@@ -22,8 +22,6 @@ function Rate({ setFieldValue }) {
         position: "relative",
         display: "flex",
         alignItems: "center",
-        mt: "0.8em",
-        height: "1.5em",
       }}
     >
       <StyledRating
