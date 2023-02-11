@@ -1,5 +1,4 @@
 import Button from "@mui/material/Button";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { Divider } from "@mui/material";
 import Empty from "components/Common/Empty/Empty";
 import { Images } from "constants/images";
@@ -10,11 +9,6 @@ import { useSelector } from "react-redux";
 
 export default function OrderSearchList({ setOrderDetail }) {
   const orderSearchResults = useSelector(selectOrderSearchResult);
-  // const [checked, setChecked] = useState(false);
-
-  // useEffect(() => {
-  //   if (orderSearchResults && orderSearchResults.length !== 0) setChecked(true);
-  // }, [orderSearchResults]);
 
   if (orderSearchResults && orderSearchResults.length === 0)
     return (
@@ -65,16 +59,8 @@ export default function OrderSearchList({ setOrderDetail }) {
                 </p>
                 <div className="order_items_btn">
                   <Button
-                    color="error"
-                    startIcon={<DeleteIcon />}
-                    variant="text"
-                    //   onClick={() => dispatch(handleDeleteOrders(items.id))}
-                  >
-                    Delete
-                  </Button>
-                  <Button
                     color="success"
-                    startIcon={<ModeEditIcon />}
+                    startIcon={<ModeEditIcon fontSize="small" />}
                     variant="text"
                     onClick={() => setOrderDetail(items)}
                   >
@@ -83,10 +69,6 @@ export default function OrderSearchList({ setOrderDetail }) {
                 </div>
               </div>
               <Divider className="order_divider" variant="middle" />
-
-              {/* {items.id === lastItem ? null : (
-          <Divider className="order_divider" variant="middle" />
-        )} */}
             </div>
             // </Grow>
           );
