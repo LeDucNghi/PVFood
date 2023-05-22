@@ -20,18 +20,6 @@ export const firebaseConfig = {
 
 const app = firebase.initializeApp(firebaseConfig);
 
-// firebase - all activities must do after initializeApp
-
-// firebase
-//   .auth()
-//   .currentUser.getIdToken(true)
-//   .then((idToken) => console.log("token", idToken))
-//   .catch((err) => console.log("err", err));
-
-// export const auth = getAuth(app);
-
-// firebase.auth().currentUser.getIdToken(true);
-
 export const auth = getAuth();
 export const db = getFirestore(app);
 export const storage = getStorage(app);
